@@ -3,261 +3,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knead You | Products</title>
+    <title>Products | Kneadforit.</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-	<!-- HEADER / NAVIGATION -->
-    <header>
-        <img src="images/header banner.png" alt="Knead You bakery banner" width="100%">
-        <nav align="center">
-            <a href="home.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="products.html">PRODUCTS</a>
-            <a href="enquiry.html">ENQUIRY</a>
-            <a href="contact.html">CONTACT</a>
-	</nav>
+<!-- HEADER SECTION -->
+ 
+    <header class="header-nav-container">
+        <div class="nav-content">
+            <a href="home.html" class="brand-logo">
+                <picture>
+                    <source type="images/webp" srcset="../images/logo.webp">
+                    <img src="images/logo.png" alt="Kneadforit Logo">
+                </picture>
+                <span class="logo-text">Kneadforit.</span>
+            </a>            
+            <nav class="nav-item-container">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="enquiries.html" class="nav-link">Enquiries</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
+        <!-- Scalloped Banner Shape -->
+        <div class="scallop-banner" aria-hidden="true">
+            <svg viewBox="0 0 1440 50" preserveAspectRatio="none">
+                <path d="M0,0 L1440,0 L1440,10 Q1350,40 1260,10 Q1170,40 1080,10 Q990,40 900,10 Q810,40 720,10 Q630,40 540,10 Q450,40 360,10 Q270,40 180,10 Q90,40 0,10 Z" fill="#DEEEF7"/>
+            </svg>
+        </div>
     </header>
 
-	<!-- PRODUCTS INTRODUCTION -->
-    <main>
-	<section>
-		<img src="images/products banner.png" alt="Knead You bakery products" width="100%">
-		<h1>Products</h1>
+<!-- PRODUCTS HERO BANNER -->
 
-	<!-- PRODUCTS NAVIGATION -->
-		<nav>
-                <a href="#bento-cakes">BENTO CAKES</a>
-                <a href="#cupcakes">CUPCAKES</a>
-                <a href="#cookies">COOKIES</a>
-                <a href="#breads">BREADS</a>
-	</nav>
-</section>
-
-<!-- BENTO CAKES -->
-	<section id="bento-cakes">
-		<h1>Bento Cakes</h1>
-
-	<article>
-		<img src="images/cm.png" alt="Coffee Mocha bento cake">
-		<h3>Coffee Mocha</h3>
-		<p>For coffee lovers, this delicious, soft cake is packed with silky mocha tastes and rich coffee. </p>
-		<p>R600.00</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/rc.png" alt="Rich Chocolate bento cake">
-		<h3>Rich Chocolate</h3>
-		<p>Richly moist chocolate cake with a creamy, luscious flavour in every swallow. </p>
-		<p>R600.00</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/vs.png" alt="Vanilla Sponge bento cake">
-		<h3>Vanilla Sponge</h3>
-		<p>A fluffy, airy vanilla sponge with a traditional handmade flavour and a subtle sweetness. </p>
-		<p>R600.00</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/ff.png" alt="Funfetti bento cake">
-		<h3>Funfetti</h3>
-		<p>A bright vanilla cake that is adorned with vibrant sprinkles, making it a lively and enjoyable dessert. </p>
-		<p>R600.00</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-</section>
-
-<!-- CUPCAKES -->
-	<section id="cupcakes">
-
-    <h1>Cupcakes</h1>
-	
-    <article>
-		<img src="images/frc.png" alt="Ferrero Rocher cupcake">
-		<h3>Ferrero Rocher</h3>
-		<p>A chocolaty goodness cupcake with hazelnut and creamy chocolate textures, modelled like the traditional Ferrero Rocher. </p>
-		<p>R150.00 | same flavour 4s</p>
-		<p>R170.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/rvc.png" alt="Crimson Velvet cupcake">
-		<h3>Crimson Velvet</h3>
-		<p>A classic combination of silky, creamy icing with a soft, velvety crimson sponge. </p>
-		<p>R120.00 | same flavour 4s</p>
-		<p>R140.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/smc.png" alt="S'more cupcake">
-		<h3>S’more</h3>
-		<p>For the pinnacle s'mores experience, a chocolaty cupcake covered with gooey marshmallow and biscuit-like tastes. </p>
-		<p>R120.00 | same flavour 4s</p>
-		<p>R140.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/ffc.png" alt="Funfetti cupcake">
-		<h3>Funfetti</h3>
-		<p>A colourful sprinkle-filled, fluffy vanilla cupcake that adds a little excitement to each nibble. </p>
-		<p>R120.00 | same flavour 4s</p>
-		<p>R140.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-</section>
-
-        <!-- COOKIES -->
-        <section id="cookies">
-
-            <h1>Cookies</h1>
-	
-	<article>
-		<img src="images/ccc.png" alt="Chocolate chip cookie">
-		<h3>Traditional chocolate chip</h3>
-		<p>A crispy, buttery cookie that is perfectly cooked and filled with exquisite chocolate chips. </p>
-		<p>R90.00 | same flavour 4s</p>
-		<p>R110.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/bsc.png" alt="Bischoff-stuffed cookie">
-		<h3>Bischoff-stuffed white chip </h3>
-		<p>A rich, decadent treat made of a soft cookie loaded with white chocolate chips and creamy Bischoff spread. </p>
-		<p>R110.00 | same flavour 4s</p>
-		<p>R130.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/mmc.png" alt="M&M cookie">
-		<h3>M&M candies</h3>
-		<p>A tasty, flaky biscuit filled with lots of sweet delights and multicoloured M&M candies. </p>
-		<p>R110.00 | same flavour 4s</p>
-		<p>R130.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/cac.png" alt="Cookies & Cream">
-		<h3>Cookies & Cream</h3>
-		<p>A smooth, indulgent cookie with milky tastes and crunchy chocolate oreo chunks. </p>
-		<p>R110.00 | same flavour 4s</p>
-		<p>R130.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-</section>
-
- <!-- BREADS -->
-	<section id="breads">
-
-		<h1>Breads</h1>
-	
-	<article>
-		<img src="images/bb.png" alt="Baguette bread">
-		<h3>Baguette</h3>
-		<p>A traditional French-style bread that has a soft, airy center and a crisp, golden exterior. </p>
-		<p>R140.00 | same flavour 4s</p>
-		<p>R160.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-        <img src="images/cbb.png" alt="Ciabatta bread">
-        <h3>Ciabatta</h3>
-        <p>
-        A rustic Italian bread using a delightfully open,
-        chewy texture and a crunchy crust.
-        </p>
-        <p>R180.00 | same flavour 4s</p>
-        <p>R210.00 | assorted 4s</p>
-        <a href="enquiries.html">ENQUIRE NOW</a>
-    </article>
-	<article>
-		<img src="images/sdb.png" alt="Sourdough bread">
-		<h3>Sourdough</h3>
-		<p>Freshly fermented bread that has a dense consistency, a crisp crust, and a unique sour taste. </p>
-		<p>R260.00 | same flavour 4s</p>
-		<p>R280.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-	<article>
-		<img src="images/brb.png" alt="Brioche bread">
-		<h3>Brioche</h3>
-		<p>A deliciously fluffy bread that is thick, buttery, and fluffy with a little sweetness. </p>
-		<p>R220.00 | same flavour 4s</p>
-		<p>R240.00 | assorted 4s</p>
-		<a href="enquiries.html">ENQUIRE NOW</a>
-	</article>
-</section>
-
-<!-- NEWSLETTER -->
-	<section>
-		<h1>
-                Baking <em>Moments</em>, Sharing <em>Memories.</em>
-		</h1>
-		<p>
-                Get ideas for freshly baked goods delivered right to your email. 
-                Get exquisite recipes, practical baking advice, seasonal goodies, 
-                and delightful surprises from KNEAD YOU by subscribing. Join us to continue baking!
-		</p>
-		<form action="#" method="post">
-		<label for="email">Email Address:</label>
-                <input type="email" id="email" name="email">
-		<button type="submit">JOIN NEWSLETTER</button>
-		</form>
-		<img src="images/newsletter.png" alt="Knead You baking" width="100%">
+    <main class="products-main-section">
+        <section class="products-banner">
+             <picture>
+                <source type="images/webp" srcset="../images/wrapperreal.webp">
+                <img src="images/wrapperreal.png" alt="Knead For It Banner Background">
+            </picture>
         </section>
-
+        <!-- Category Header & Navigation Section -->
+        <section class="products-category-wrapper">
+            <!-- Category Title directly above buttons -->
+            <h2 class="category-main-title">✶⋆.˚ Product Categories ˚.⋆✶</h2>
+            <div class="category-buttons-container">
+            <a href="products.html#bento-cakes" class="cat-btn">Bento Cakes</a>
+            <a href="products.html#cupcakes" class="cat-btn">Cupcakes</a>
+            <a href="products.html#cookies" class="cat-btn">Cookies</a>
+            <a href="products.html#breads" class="cat-btn">Breads</a>
+        </div>
+        </div>
+        </section>  
     </main>
 
-    <!-- FOOTER -->
-	<footer>
+<!-- BENTO CAKES CATEGORY SECTION -->
 
-    <div class="footer-content">
-        <div>
-            <img src="images/wordmark.png" alt="Knead You bakery" width="20%" height="80px">
-            <p>
-                Where Hearts<br>
-                Gather,<br>
-                Dough Rises.
-            </p>
+        <section class="category-section" id="bento-cakes">
+            <div class="product-grid">
+                <!-- Item 1: Vanilla Berry Cloud -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/stawberry2.webp">
+                            <img src="images/stawberry2.png" alt="Vanilla Berry Cloud Bento Cake" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Vanilla Berry<br>Cloud</h3>
+                        <p class="product-description">
+                        Fluffy vanilla sponge layered with house-made strawberry jam and light whipped cream, creating a sweet treat in a perfect single-serve bento size.
+                        </p>
+                        <p class="product-variant">Small (1 layer, 10cm) | R 180</p>
+                        <p class="product-price">Medium (3 layers, 18cm) | R 450</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Item 2: Midnight Cocoa Truffle -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/darkchoco.webp">
+                            <img src="images/darkchoco.png" alt="Midnight Cocoa Truffle Bento Cake" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Midnight Cocoa<br>Truffle</h3>
+                        <p class="product-description">
+                        Three layers of moist, dark cocoa sponge frosted with silky chocolate buttercream and topped with piped rosettes.
+                        </p>
+                        <p class="product-variant">Medium (3 layers, 18cm)</p>
+                        <p class="product-price">R 600</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Item 3: Mocha Swirl Espresso -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/marble.webp">
+                            <img src="images/marble.png" alt="Mocha Swirl Espresso Bento Cake" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mocha Swirl<br>Espresso</h3>
+                        <p class="product-description">
+                        Marble swirl of chocolate and vanilla espresso sponge features smooth chocolate ganache frosting with bold coffee notes.
+                        </p>
+                        <p class="product-variant">Small (1 layer, 10cm) | R 200</p>
+                        <p class="product-price">Medium (3 layers, 18cm) | R 520</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Item 4: Carnival Sunset -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/carnival.webp">
+                            <img src="images/carnival.png" alt="Carnival Sunset Bento Cake" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Carnival<br>Sunset</h3>
+                        <p class="product-description">
+                        Vibrant pink and golden sponge layers feature whipped cream frosting, coated in a colorful rainbow sprinkle shower.
+                        </p>
+                        <p class="product-variant">Small (1 layer, 10cm) | R 190</p>
+                        <p class="product-price">Medium (3 layers, 18cm) | R 480</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- CUPCAKES CATEGORY SECTION -->
+
+        <section class="category-section" id="cupcakes">
+            <div class="product-grid">
+                <!-- Cupcake 1: Ferrero Rocher -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/ferrero.webp">
+                            <img src="images/ferrero.png" alt="Ferrero Rocher Cupcake" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ferrero Rocher</h3>
+                        <p class="product-description">
+                            Decadent chocolate cupcake features velvety Rocher frosting, finished with a 
+                            whole Ferrero and crunchy hazelnut pieces.
+                        </p>
+                        <p class="product-variant">Same flavour (6 cupcakes) | R 220</p>
+                        <p class="product-price">Assorted flavours (6 cupcakes) | R 250</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Cupcake 2: Ruby Cream Swirl -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                         <picture>
+                            <source type="images/webp" srcset="../images/velvet.webp">
+                            <img src="images/velvet.png" alt="Ruby Cream Swirl Cupcake" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ruby Cream Swirl</h3>
+                        <p class="product-description">
+                            Deep-red cocoa sponge features silky vanilla cream cheese frosting, finished with fine, delicate red crumbs.
+                        </p>
+                        <p class="product-variant">Same flavour (6 cupcakes) | R 200</p>
+                        <p class="product-price">Assorted flavours (6 cupcakes) | R 250</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Cupcake 3: Salted Caramel Cocoa Dip -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/caramel.webp">
+                            <img src="images/caramel.png" alt="Salted Caramel Cocoa Dip Cupcake" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Salted Caramel Cocoa Dip</h3>
+                        <p class="product-description">
+                            Soft vanilla cake, chocolate shell, whipped caramel frosting, and a rich caramel drizzle combine effortlessly.
+                        </p>
+                        <p class="product-variant">Same flavour (6 cupcakes) | R 200</p>
+                        <p class="product-price">Assorted flavours (6 cupcakes) | R 250</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Cupcake 4: Party Sprinkle Sparkle -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/confetti.webp">
+                            <img src="images/confetti.png" alt="Party Sprinkle Sparkle Cupcake" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Party Sprinkle Sparkle</h3>
+                        <p class="product-description">
+                            Light vanilla confetti sponge features sweet pastel-pink buttercream, lavishly showered with colorful, 
+                            bright rainbow sprinkles.
+                        </p>
+                        <p class="product-variant">Same flavour (6 cupcakes) | R 200</p>
+                        <p class="product-price">Assorted flavours (6 cupcakes) | R 250</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- COOKIES CATEGORY SECTION -->
+
+        <section class="category-section" id="cookies">
+            <div class="product-grid">
+                <!-- Cookie 1: Pink Velvet Thumbprint -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/thumbprint.webp">
+                            <img src="images/thumbprint.png" alt="Pink Velvet Thumbprint Cookie" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Pink Velvet<br>Thumbprint</h3>
+                        <p class="product-description">
+                            Soft, buttery vanilla cookie baked golden with a deep pool of strawberry-infused pink buttercream right in the center.
+                        </p>
+                        <p class="product-variant">Same flavour (6 cookies) | R 180</p>
+                        <p class="product-price">Assorted flavours (6 cookies) | R 220</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Cookie 2: Biscoff PB Crunch -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/biscoff.webp">
+                            <img src="images/biscoff.png" alt="Biscoff PB Crunch Cookie" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Biscoff PB<br>Crunch</h3>
+                        <p class="product-description">
+                            Rich cookie dough infused with spiced Lotus Biscoff, drizzled with creamy peanut butter, and topped with crunchy roasted peanut pieces.
+                        </p>
+                        <p class="product-variant">Same flavour (6 cookies) | R 180</p>
+                        <p class="product-price">Assorted flavours (6 cookies) | R 220</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Cookie 3: Triple Chocolate Drop -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/chocochip.webp">
+                            <img src="images/chocochip.png" alt="Triple Chocolate Drop Cookie" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Triple Chocolate<br>Drop</h3>
+                        <p class="product-description">
+                            Classic golden-baked brown sugar dough crisp on the edges and soft in the center, densely packed with decadent milk and dark chocolate chips.
+                        </p>
+                        <p class="product-variant">Same flavour (6 cookies) | R 180</p>
+                        <p class="product-price">Assorted flavours (6 cookies) | R 220</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Cookie 4: Funfetti Sandwich -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/sandwich2.webp">
+                            <img src="images/sandwich2.png" alt="Funfetti Sandwich Cookie" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Funfetti<br>Sandwich</h3>
+                        <p class="product-description">
+                            Rich, chewy double-chocolate cookies layered with fluffy vanilla and baby-blue buttercream, topped with a burst of rainbow sprinkles for a decadent, colorful bite.
+                        </p>
+                        <p class="product-variant">Same flavour (6 cookies) | R 200</p>
+                        <p class="product-price">Assorted flavours (6 cookies) | R 220</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- BREADS CATEGORY SECTION -->
+
+        <section class="category-section" id="breads">
+            <div class="product-grid">
+                <!-- Bread 1: Golden Rustic Baguette -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/baguette.webp">
+                            <img src="images/baguette.png" alt="Golden Rustic Baguette" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Golden Rustic<br>Baguette</h3>
+                        <p class="product-description">
+                            Traditional French-style loaf features a golden crackly crust and scored top with a soft, pillowy interior.
+                        </p>
+                        <p class="product-variant">Same bread (4 loaves) | R 160</p>
+                        <p class="product-price">Assorted breads (6 loaves) | R 280</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Bread 2: Hearth-Baked Ciabatta -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/ciabatta.webp">
+                            <img src="images/ciabatta.png" alt="Hearth-Baked Ciabatta" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Hearth-Baked<br>Ciabatta</h3>
+                        <p class="product-description">
+                            Classic Italian slipper bread features a flour-dusted crisp crust and light, airy crumb structure for dipping.
+                        </p>
+                        <p class="product-variant">Same bread (4 loaves) | R 210</p>
+                        <p class="product-price">Assorted breads (6 loaves) | R 280</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Bread 3: Heritage Seeded Sourdough -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/sourdough.webp">
+                            <img src="images/sourdough.png" alt="Heritage Seeded Sourdough" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Heritage Seeded<br>Sourdough</h3>
+                        <p class="product-description">
+                            Slow-fermented small batch loaf features a golden crust, chewy sourdough flavour, and crisp sesame seeds.
+                        </p>
+                        <p class="product-variant">Same bread (4 loaves) | R 240</p>
+                        <p class="product-price">Assorted breads (6 loaves) | R 280</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+                <!-- Bread 4: Butter-Rich Knot Brioche -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="../images/sourdough.webp">
+                            <img src="images/brioche.png" alt="Butter-Rich Knot Brioche" class="product-img">
+                        </picture>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Butter-Rich<br>Knot Brioche</h3>
+                        <p class="product-description">
+                            Rich, egg-and-butter bread baked with a distinctive knotted shape and light sugar dusting sweetness.
+                        </p>
+                        <p class="product-variant">Same bread (4 loaves) | R 220</p>
+                        <p class="product-price">Assorted breads (6 loaves) | R 280</p>
+                        <a href="#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- FOOTER SECTION -->
+
+    <footer class="site-footer">
+    <div class="footer-container">        
+        <!-- Storefront Illustration -->
+        <div class="footer-column footer-storefront">
+            <picture>
+                <source type="images/webp" srcset="./images/store.webp">
+                <img src="images/store.png" alt="Knead For It Storefront">
+            </picture>
         </div>
-
-        <div>
-            <h3>EXPLORE</h3>
-            <p>
-                <a href="about.html">ABOUT US</a><br>
-                <a href="products.html">PRODUCTS</a><br>
-                <a href="enquiry.html">ENQUIRIES</a>
-            </p>
+        <!-- Explore Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="enquiries.html">Baking Classes</a></li>
+            <li><a href="#enquiry-form-section">Custom Enquiries</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
         </div>
-
-        <div>
-            <h3>SAY <em>HELLO</em></h3>
-            <p>
-                159 Bakery Street<br>
-                HazelWood, Pretoria, 
-                0001<br>
-                012 444 6767
-            </p>
+        <!-- Support Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+            <li><a href="#">How to Order</a></li>
+            <li><a href="#">Order FAQs</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
         </div>
-
-        <div>
-            <h3>FOLLOW US</h3>
-            <p>
-                <a href="#">X</a>
-                <a href="#">Instagram</a>
-                <a href="#">TikTok</a>
-            </p>
+        <!-- Socials Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Socials</h4>
+        <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
         </div>
-
+        <!-- Location Details -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Visit Us</h4>
+        <address class="footer-address">
+            16th Street<br>
+            Hazelwood<br>
+            Pretoria<br>
+            0081<br><br>
+            8am - 5pm daily
+        </address>
+        </div>
     </div>
-
-    <p class="copyright">
-        KNEAD YOU © 2022. ALL RIGHTS RESERVED.
-    </p>
-    <img src="images/footer banner.png" alt="Knead You footer banner" width="100%">
-</footer>
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+        <p>KNEAD FOR IT &copy; 2026. ALL RIGHTS RESERVED.</p>
+    </div>
+    </footer>
 
 </body>
-
 </html>
