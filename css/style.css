@@ -1,0 +1,571 @@
+/* Kneadforit Styling and Responsiveness for Website */
+
+* {                            
+/* Resetting default margins and paddings */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+/* Storing the font stack and colours inside a CSS variable name */  
+/* Youtube Ref: "Learn CSS Variables In 7 Minutes" */                    
+/* Color Palette */
+  --color-lemon-chiffon: #FCF8CB;
+  --color-alice-blue: #DEEEF7;                  /* Updated header background color */
+  --color-cotton-candy: #E88794;
+  --color-blush-pink: #F7D7DB;
+  --color-peach: #EDBF9D;
+  --color-crushed-berry: #A51F26;
+  --color-espresso: #513029;
+  --color-rich-mahogany: #4B0C07;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+/* Typography System */
+  --font-logo: 'Boldonse', sans-serif;
+  --font-h1: 'Merriweather', serif;
+  --font-h2: 'Poppins', sans-serif;
+  --font-body: 'Poppins', sans-serif;               /* Updated font system */
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-alice-blue);
+  background-color: var(--color-white);             /* Neutral canvas so blue only stays inside header */
+  color: var(--color-black);
+  overflow-x: hidden;
+}
+
+/* RESPONSIVE IMAGES BASE STYLES */
+img, 
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* PICTURE TAG CONTAINER */
+picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+picture img {
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER NAVIGATION */
+
+.header-nav-container {
+  position: relative;      
+  top: 0;
+  width: 100%;
+  min-height: 7.5rem;
+  background-color: var(--color-alice-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;                    /* making sure header stays on top of all images & text */
+}
+.nav-content {
+  width: 90%;
+  max-width: 80.625rem;                /* Adapts seamlessly across 1366px, 1440px, 1536px, and 1920px */
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.brand-logo img,
+.brand-logo picture {
+  height: 6.25rem;
+  width: auto;
+  display: block;
+}
+.logo-text {
+  font-family: var(--font-logo);     /* Boldonse */
+  font-size: 1.25rem;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+.nav-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.625rem;
+  width: auto;         
+  flex-wrap: wrap;
+}
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 300;                 /* Poppins Light */
+  color: var(--color-black);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2.5rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+.nav-link:hover,
+.nav-link.active,
+.nav-link.nav-item-button {
+  padding: 0.5rem 1rem;
+  font-weight: 500;                /* Slightly stronger for active emphasis */
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  border-radius: 2.5rem;
+  background-color: var(--color-lemon-chiffon);
+}
+.scallop-banner {
+  position: absolute;
+  bottom: -6.25rem;
+  left: 0;
+  width: 100%;
+  height: 6.3rem;
+  z-index: 25;
+  pointer-events: none;
+}
+.scallop-banner svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: -7.5rem;           /* Negative margin pulls the top of the hero under the header */
+  position: relative;
+  z-index: 1;
+}
+.hero-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: auto;
+}
+.hero-image-wrapper {
+  flex: 50 0 58%;
+  width: 58%;
+  height: 100%;
+  overflow: hidden;
+}
+.hero-image-wrapper picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-content-card {
+  flex: 0 0 42%;
+  width: 42%;
+  height: 100%;
+  background-color: var(--color-crushed-berry);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;             /* Right-aligned layout */
+  text-align: right;
+  padding: 8.75rem 5rem 3.75rem 5rem;
+  box-sizing: border-box;
+}
+.hero-title {
+  font-family: var(--font-h1);      /* Merriweather */
+  font-size: 2.8125rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  gap: 0.25rem;
+}
+hero-title .title-line {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.hero-title .star-icon {
+  font-size: 2.8125rem;
+  line-height: 2.8125rem;
+  margin: 0 0.375rem;
+}
+.hero-title .text-italic {
+  font-weight: 200;
+  font-style: italic;
+}
+.hero-title .text-bold {
+  font-weight: 500;
+  font-style: normal;
+  margin-left: 0.375rem;
+}
+.hero-body {
+  font-family: var(--font-body);        /* Poppins */
+  font-size: 1rem;
+  font-weight: 200;                     /* Light weight default */
+  line-height: 1.6;
+  max-width: 30rem;
+  color: var(--color-white);
+  margin-bottom: 2.25rem;
+}
+.hero-body strong {
+  font-weight: 500;                     /* Bold weight for highlighted words */
+}
+.hero-btn {
+  display: inline-block;
+  font-family: var(--font-body);        /* Poppins */
+  font-size: 1rem;
+  font-weight: 400;                     /* Poppins 400 */
+  letter-spacing: 0.0625rem;
+  color: var(--color-black);            /* Default text black */
+  border: 1px solid var(--color-white);
+  background-color: var(--color-white); /* Default container white */
+  text-decoration: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 2.5rem;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+/* Hover State */
+.hero-btn:hover {
+  background-color: var(--color-espresso);
+  color: var(--color-white);               /* Hover text white */
+  border: 1px solid var(--color-white);
+}
+
+/* MARQUEE STRIP */
+/* Youtube Ref: "You Can't Find a Better Infinite Marquee" */
+.marquee-strip {
+  width: 100%;
+  background-color: var(--color-lemon-chiffon);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 20;                           /* Stays above hero overlays */
+  padding: 0.625rem 0;
+  box-sizing: border-box;
+}
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: marquee-infinite 15s linear infinite;
+}
+.marquee-content span {
+  font-family: var(--font-logo);
+  font-size: 2.1875rem;
+  line-height: 2.75rem;
+  font-weight: 500;
+  color: var(--color-cotton-candy);
+  letter-spacing: 0.125rem;
+  padding-right: 1.875rem;
+  align-items: center;
+}
+.marquee-content span {
+  vertical-align: middle;
+}
+@keyframes marquee-infinite {           /* Seamless Infinite Loop */
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* BESTSELLER PRODUCTS SECTION */
+
+.products-section {
+  background-color: var(--color-peach);
+  padding: 3.125rem 1.875rem;
+  width: 100%;
+  box-sizing: border-box;               /* To prevent any overflow caused by padding */
+}
+.product-scroll-container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+/* Youtube Ref: "Hide Scrollbar From Wesbites in Different Browsers | HTML and CSS" */
+  scrollbar-width: none;            /* Hiding scrollbar for Firefox, Chrome, Safari, Edge  */
+}
+.product-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.product-card {
+  flex: 0 0 19.375rem;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products-title {
+  font-family: var(--font-logo);
+  font-size: 2.1875rem;
+  font-weight: 500;
+  color: var(--color-lemon-chiffon);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1.875rem;
+  letter-spacing: 0.03125rem;
+}
+
+/* Youtube Ref: "CSS Neon Glow Effect in 2 Minutes" */
+/* Youtube Ref: "Learn All CSS Transition Property for Smooth Animation" */
+.product-image-wrapper {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.product-image-wrapper picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.product-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.3125rem #ffffff)
+          drop-shadow(0 0 0.125rem #FEF08ACC);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.product-card:hover .product-image-wrapper img {
+  transform: scale(1.06);
+}
+.product-category {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-espresso);
+  margin-bottom: 0.375rem;
+}
+.product-name {
+  font-family: var(--font-h1);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+}
+.product-description {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-black);
+  margin-bottom: 1.75rem;
+  flex-grow: 1;                             /* Pushes button row evenly to bottom */
+}
+.view-btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--color-espresso);
+  background-color: var(--color-alice-blue);
+  border: 1px solid var(--color-espresso);
+  border-radius: 1.875rem;
+  padding: 0.625rem 1.75rem;
+  text-decoration: none;
+  margin-top: auto;
+  transition: all 0.25s ease;
+}
+/* Interactive Hover State */
+.view-btn:hover {
+  background-color:var(--color-crushed-berry);
+  border: 1px var(--color-white);
+  color: var(--color-white);
+  transform: translateY(-0.125rem);
+}
+
+/* FOOTER SECTION */
+
+.site-footer {
+  background-color: var(--color-lemon-chiffon);
+  padding: 3.125rem 2rem 1.25rem;
+  width: 100%;
+}
+/* Youtube Ref: "RESPONSIVE FOOTER WITH HTML AND CSS GRIDS" */
+.footer-container {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, 1fr);
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+.footer-storefront img,
+.footer-storefront picture {
+  max-width: 11.25rem;
+  height: auto;
+  display: block;
+}
+.footer-heading {
+  font-family: var(--font-h1);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-cotton-candy);
+  margin-bottom: 1.25rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.625rem;
+}
+.footer-links a {
+  text-decoration: none;
+  color: var(--color-espresso);
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  transition: color 0.2s ease;
+}
+.footer-links a:hover {
+  color: var(--color-cotton-candy);
+  text-decoration: none;
+}
+.footer-address {
+  font-style: normal;
+  font-size: 0.875rem;
+  color: var(--color-espresso);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.footer-bottom {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  letter-spacing: 0.03125rem;
+  color: var(--color-espresso);
+}
+
+
+
+/* RESPONSIVE DESIGN */
+/* Youtube Ref: "Master Responsive CSS Media Queries in easy way" */
+/* Mobile & Tablet Viewport (Up to 1032px - Surface Pro & iPad Pro) */
+@media screen and (max-width: 65em) {
+  /* Prevent page blowouts */
+  html, 
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* HEADER */
+
+  body .header-nav-container,
+  body .nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* Centers logo and nav container horizontally */
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  body .nav-item-container {
+    display: flex;
+    flex-direction: row;        /* Keep links row-based on mobile */
+    flex-wrap: wrap;           /* Allows items to wrap neatly */
+    justify-content: center;   /* Centers wrapped items on the second line */
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  body .header-nav-container img,
+  body .nav-logo {
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* HOME PAGE */
+
+  body .hero-section,
+  body .hero-container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  body .hero-image-wrapper,
+  body .hero-content-card {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    height: auto;
+  }
+  body .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  body .hero-content-card {
+    padding: 2.5rem 1.5rem;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* FOOTER */
+  body .site-footer,
+  body .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+  }
+  body .footer-column {
+    flex: 1 1 45%;
+  }
+}
+
+/* MOBILE PHONES (Under 550px) */
+@media screen and (max-width: 34.375em) {
+  body .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  body .footer-storefront img,
+  body .footer-storefront picture {
+    margin: 0 auto;
+  }
+}
