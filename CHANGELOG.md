@@ -57,6 +57,15 @@ All notable changes to the KY Bakery website are documented here.
 - Added aspect-ratio constrained `.wavy-card` styling for Mission & Vision image frame containers.
 - Added media queries scaling wavy card text and padding for mobile viewports under 550px.
 
+### Products:
+- Created category navigation bar with jump links (`#bento-cakes`, `#cupcakes`, `#cookies`, `#breads`).
+- Built product card grid catalog showcasing Bento Cakes, Cupcakes, Cookies, and Artisanal Breads.
+- Added pricing, sizing variants, and direct inquiry CTA buttons (`Enquire Now`) for all catalog items.
+- Expanded `css/style.css` with dedicated Products catalog styling rules.
+- Added smooth scrolling behaviors and anchor scroll-margin offsets for category sections.
+- Configured 4-column CSS Grid layout (`.product-grid`) for product item cards.
+- Added drop-shadow glow effects on product image wrappers and interactive CTA button hover transitions
+
 ## Changed
 
 ### Home:
@@ -72,6 +81,11 @@ All notable changes to the KY Bakery website are documented here.
 - Updated site footer to match the standardized multi-column structure and address details.
 - Improved story narrative container positioning using negative margins for seamless header overlay.
 
+### Products:
+- Standardized product card layouts to use central `style.css` grid and typography classes.
+- Updated header and footer components to match site-wide brand styling.
+- Added responsive media queries scaling product card grid from 4 columns to 2 columns (tablet) and single column (mobile).
+
 
 ## Commits
 - `Updates to home page`
@@ -79,3 +93,5 @@ All notable changes to the KY Bakery website are documented here.
 - `Add style.css stylesheet for styling and responsiveness`
 - `Updates to about page layout`
 - `Added About Us page CSS rules to style.css`
+- `Updates to products page layout and catalog content`
+- `Added Products page layout and catalog grid rules`
