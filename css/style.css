@@ -1216,6 +1216,103 @@ main, .main-container {
   border: 1px solid var(--color-white);
 }
 
+/* CONTACT PAGE */
+
+.contact-main {
+  background-color: var(--color-peach);
+  width: 100%;
+}
+.contact-hero {
+  max-width: 80.625rem;
+  margin: 0 auto;
+  padding: 3.125rem 1.25rem 1.875rem 1.25rem;
+  text-align: center;
+}
+.contact-title {
+  font-family: var(--font-logo);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-espresso);
+  margin-top: 6.25rem;
+  margin-bottom: 1.875rem;
+  line-height: 1.2;
+}
+.contact-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-espresso);
+  max-width: 47.5rem;
+  margin: 0.625rem auto;
+}
+.contact-subtitle strong{
+   font-weight: 500;
+}
+
+/* Split Content Container */
+.contact-content-section {
+  width: 100%;
+  padding: 1.25rem 5rem 6.25rem 5rem;
+  box-sizing: border-box;
+}
+.contact-container {
+  max-width: 80.625rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.contact-details-col {
+  width: 18.75rem;
+  flex-shrink: 0;
+}
+.contact-map-col {
+  width: 45rem;
+  flex-shrink: 0;
+}
+.col-heading {
+  font-family: var(--font-logo);
+  font-size: 1.75rem;
+  line-height: 3.125rem;
+  font-weight: 500;
+  color: var(--color-cotton-candy);
+  margin-bottom: 1.25rem;
+}
+.info-group {
+  margin-bottom: 1.875rem;
+}
+.info-label {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-cotton-candy);
+  margin-bottom: 0.25rem;
+}
+.info-value {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-black);
+}
+
+/* Map Wrapper & Styling */
+/* Youtube Ref: "How To Add Google Map On Website Using HTML And CSS | Embed Location Map On Website" */
+.map-frame-wrapper {
+  width: 45rem;
+  height: 43.75rem;
+  border: 0.25rem solid var(--color-lemon-chiffon);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.map-frame-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
 
 
 
@@ -1411,6 +1508,31 @@ main, .main-container {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+/* CONTACT PAGE */
+  body .contact-container,
+  body .contact-content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  body .contact-details-col,
+  body .contact-map-col,
+  body .contact-info,
+  body .contact-map,
+  body .map-frame-wrapper {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    box-sizing: border-box;
+  }
+  body .map-frame-wrapper,
+  body .contact-map iframe {
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
   }
 }
 
