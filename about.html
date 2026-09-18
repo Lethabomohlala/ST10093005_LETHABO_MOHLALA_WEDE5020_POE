@@ -1,142 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knead You | About Us</title>
+    <title>About Us | Kneadforit.</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- HEADER / NAVIGATION -->
-    <header>
-        <img src="images/header banner.png" alt="Knead You bakery banner" width="100%">
-        <nav align="center">
-            <a href="home.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="products.html">PRODUCTS</a>
-            <a href="enquiry.html">ENQUIRY</a>
-            <a href="contact.html">CONTACT</a>
-        </nav>
+<!-- HEADER SECTION -->
+
+    <header class="header-nav-container">
+        <div class="nav-content">
+            <a href="home.html" class="brand-logo">
+                <picture>
+                    <source type="images/webp" srcset="../images/logo.webp">
+                    <img src="images/logo.png" alt="Kneadforit Logo">
+                </picture>
+                <span class="logo-text">Kneadforit.</span>
+            </a>            
+            <nav class="nav-item-container">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="enquiries.html" class="nav-link">Enquiries</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
+        <!-- Scalloped Banner Shape -->
+        <div class="scallop-banner" aria-hidden="true">
+            <svg viewBox="0 0 1440 50" preserveAspectRatio="none">
+                <path d="M0,0 L1440,0 L1440,10 Q1350,40 1260,10 Q1170,40 1080,10 Q990,40 900,10 Q810,40 720,10 Q630,40 540,10 Q450,40 360,10 Q270,40 180,10 Q90,40 0,10 Z" fill="#DEEEF7"/>
+            </svg>
+        </div>
     </header>
 
-    <!-- MAIN CONTENT -->
+<!--STORY HERO SECTION-->
+
     <main>
-
-        <!-- OUR STORY SECTION -->
-	<section>
-        <div>
-		<img src="images/story i1.png" alt="Freshly baked goods from Knead You" width="100%">
-		</div>
-<div>
-                <h1></em>Our</em> Story</h1>
-		<p>
-			KNEAD YOU (KY) is a contemporary, neighbourhood-focused bakery that unites people with a passion 
-			for baking and tasty treats. It was founded in 2022. Its humorous name, which blends the words "knead" 
-			and "need you," reflects the idea that food can encourage connections, memories, and a feeling of community.
-            KY encourages people to savour freshly baked goods and experience the joy of baking themselves 
-            by fusing classic tastes with modern presentation, inventive recipes, and a straightforward, clean aesthetic.
-		</p>         
-</div>
-	</section>
-
-    <!-- MISSION AND VALUES SECTION -->
-        <section>
-<div>
-                <img src="images/breaker.png" alt="Knead You breaker" width="100%" height="60px">
-	</div>
-	<div>
-                <h1>Our Mission &amp; Values</h1>
-                <p>
-			The mission of KNEAD YOU is to unite people with accessible digital content, distinctive 
-			baking experiences, classes, recipes, and locally baked products. By fostering creativity, 
-			leisure, connection, and individuality while creating a warm, community-driven baking 
-			environment, the brand hopes to make baking accessible and rewarding for people of all skill levels.
+        <section class="about-story-hero">
+        <!-- Continuous Horizontal Image Slider -->
+        <div class="story-slider-overflow">
+            <div class="story-slider-track">
+            <!-- First Set -->
+            <div class="slide-item" style="background-image: url('../images/display1.png');"></div>
+            <div class="slide-item" style="background-image: url('../images/display2.png');"></div>
+            <div class="slide-item" style="background-image: url('../images/display3.png');"></div>
+            
+            <!-- Duplicate Set for Infinite Seamless Loop -->
+            <div class="slide-item" style="background-image: url('../images/display1.png');"></div>
+            <div class="slide-item" style="background-image: url('../images/display2.png');"></div>
+            <div class="slide-item" style="background-image: url('../images/display3.png');"></div>
+            </div>
+        </div>
+        <!-- Content Container Overlay -->
+        <div class="story-content-container">
+            <div class="story-header-group">
+            <span class="story-tag">Our Story</span>            
+            <h1 class="story-heading">
+                <span class="font-serif">Because</span> 
+                <span class="star">&#10038;</span> 
+                <span class="font-italic">good treats</span> 
+                <span class="star">&#10038;</span><br>
+                <span class="font-serif">and great connections are</span><br>
+                <span class="font-serif">things we all Knead.</span>
+            </h1>
+            </div>
+            <div class="story-card">
+                <p>At <strong>Kneadforit.</strong>, we believe that food does more than 
+                    satisfy a craving—it brings people together, creates lasting memories, and builds community. 
+                    Founded in <strong>2022</strong>, our contemporary neighbourhood bakery was born out of a deep passion for 
+                    baking and sharing delicious, thoughtfully crafted treats.
                 </p>
-		<p>
-			The goal of KNEAD YOU is to establish itself as a reputable and well-known neighbourhood bakery 
-			that encourages people to bake, interact, and use food to create unforgettable memories. The brand 
-			combines high-quality products with a lively, amicable outlook and an active online and offline 
-			community in an effort to cater to younger foodies while also being welcoming to families and baking aficionados.
+                <p>Our name is a humorous, playful nod to the idea that just as dough needs time and care to rise, we all need connection. 
+                    By blending classic, comforting flavours with modern presentation, clean design, and inventive recipes, 
+                    <strong>Kfi.</strong> encourages you to savour freshly baked goods and experience the simple joy of baking.
                 </p>
-	</div>
+            </div>
+        </div>
         </section>
-    
-        <!-- Community, Creativity, Warmth values -->
-	 <article>
-		<img src="images/community.png" alt="Community" width="300px" height="300px">
-		<h3>COMMUNITY</h3>
-                <p>
-			Uniting individuals through food and common experiences.
-                </p>
-	</article>
-	<article>
-		<img src="images/creativity.png" alt="Creativity" width="300px" height="300px">
-		<h3>CREATIVITY</h3>
-		<p>
-			Showcasing traditional baking in novel and captivating ways.
-		</p>
-	</article>
-<article>
-		<img src="images/warmth.png" alt="Warmth" width="300px" height="300px">
-		<h3>WARMTH</h3>
-		<p>
-			Developing a friendly, accessible, and personable brand.
-		</p>
-	</article>
-      </section>
-
     </main>
 
-    <!-- FOOTER -->
-	<footer>
+<!-- MISSION & VISION SECTION -->
 
-    <div class="footer-content">
-        <div>
-            <img src="images/wordmark.png" alt="Knead You bakery" width="20%" height="80px">
-            <p>
-                Where Hearts<br>
-                Gather,<br>
-                Dough Rises.
+        <!-- Top Marquee Divider -->
+        <div class="about-marquee">
+        <div class="marquee-content">
+            <span>✦ Uniting foodies, families, and future bakers-one memory at a time ✦</span>
+            <span>✦ Uniting foodies, families, and future bakers-one memory at a time ✦</span>
+        </div>
+        </div>
+        <!-- Mission & Vision Section -->
+        <section class="mission-vision-section">
+        <div class="mission-vision-container">   
+            <!-- Our Mission -->
+            <article class="wavy-card">
+            <h2 class="card-title">Our Mission</h2>
+            <p class="card-text">
+                To unite people through accessible digital content, distinctive baking experiences, interactive classes, 
+                and fresh, locally made treats. We foster creativity, connection, and individuality in a warm, community-driven 
+                environment, making baking accessible and rewarding for all skill levels.
             </p>
+            </article>
+            <!-- Our Vision -->
+            <article class="wavy-card">
+            <h2 class="card-title">Our Vision</h2>
+            <p class="card-text">
+                To become a beloved neighbourhood landmark and vibrant online hub that inspires people to bake, connect, 
+                and craft unforgettable memories through food. Combining high-quality bakes with a friendly, welcoming 
+                spirit, <strong>Kneadforit.</strong> serves as a destination for younger foodies, families, and baking lovers alike.
+            </p>
+            </article>
+        </div>
+        </section>
+        <!-- Bottom Marquee Divider -->
+        <div class="about-marquee">
+        <div class="marquee-content">
+            <span>✦  Where baking meets community & warmth, online & in the kitchen ✦ </span>
+            <span>✦  Where baking meets community & warmth, online & in the kitchen ✦ </span>
+        </div>
         </div>
 
-        <div>
-            <h3>EXPLORE</h3>
-            <p>
-                <a href="about.html">ABOUT US</a><br>
-                <a href="products.html">PRODUCTS</a><br>
-                <a href="enquiry.html">ENQUIRIES</a>
-            </p>
-        </div>
+<!-- FOOTER SECTION -->
 
-        <div>
-            <h3>SAY <em>HELLO</em></h3>
-            <p>
-                159 Bakery Street<br>
-                HazelWood, Pretoria, 
-                0001<br>
-                012 444 6767
-            </p>
+    <footer class="site-footer">
+    <div class="footer-container"> 
+        <!-- Storefront Illustration -->
+        <div class="footer-column footer-storefront">
+            <picture>
+                <source type="images/webp" srcset="./images/store.webp">
+                <img src="images/store.png" alt="Knead For It Storefront">
+            </picture>
         </div>
-
-        <div>
-            <h3>FOLLOW US</h3>
-            <p>
-                <a href="#">X</a>
-                <a href="#">Instagram</a>
-                <a href="#">TikTok</a>
-            </p>
+        <!-- Explore Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="enquiries.html">Baking Classes</a></li>
+            <li><a href="#enquiry-form-section">Custom Enquiries</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        </div>
+        <!-- Support Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+            <li><a href="#">How to Order</a></li>
+            <li><a href="#">Order FAQs</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        </div>
+        <!-- Socials Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Socials</h4>
+        <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+        </div>
+        <!-- Location Details -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Visit Us</h4>
+        <address class="footer-address">
+            16th Street<br>
+            Hazelwood<br>
+            Pretoria<br>
+            0081<br><br>
+            8am - 5pm daily
+        </address>
         </div>
 
     </div>
-
-    <p class="copyright">
-        KNEAD YOU © 2022. ALL RIGHTS RESERVED.
-    </p>
-    <img src="images/footer banner.png" alt="Knead You footer banner" width="100%">
-</footer>
-
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+        <p>KNEAD FOR IT &copy; 2026. ALL RIGHTS RESERVED.</p>
+    </div>
+    </footer>
+    
 </body>
-
 </html>
