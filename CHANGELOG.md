@@ -112,6 +112,7 @@ All notable changes to the KY Bakery website are documented here.
 
 ## Fixed
 - Updated "Enquire Now" CTA button links on product cards (`products.html`) to correctly navigate to the Enquiries form (`enquiries.html#enquiry-form-section`).
+- Fixed footer navigation links for "Custom Enquiries", "Order FAQs", and "How to Order" across all HTML pages to correctly point to `enquiries.html#enquiry-form-section`.
 
 ## Commits
 - `Updates to home page`
