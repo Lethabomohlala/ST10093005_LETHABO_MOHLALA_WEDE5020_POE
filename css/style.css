@@ -475,6 +475,218 @@ hero-title .title-line {
   color: var(--color-espresso);
 }
 
+/* ABOUT US PAGE */
+
+/* STORY HERO SECTION */
+/* Youtube Ref: "Build Infinite Carousel Animations in 4 Minutes" */
+.about-story-hero {
+  position: relative;
+  margin-top: -12.5rem; 
+  width: 100%;
+  min-height: 56.25rem;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+.story-slider-overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.story-slider-track {
+  display: flex;
+  width: 225rem;
+  height: 100%;
+  animation: horizontalSlide 30s linear infinite;
+}
+.slide-item {
+  width: 37.5rem;
+  height: 100%;
+  flex-shrink: 0 0 37.5rem;
+  background-size: cover;
+  background-position: center;
+}
+@keyframes horizontalSlide {            /* Infinite Horizontal Scroll */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);        /* Shifts exactly half the track length */
+  }
+}
+.story-content-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 80.625rem;
+  margin: 0 auto;
+  padding: 18.75rem 2rem 2.5rem 2rem; 
+}
+.story-header-group {
+  max-width: 40.625rem;
+  margin-bottom: 1.5rem;
+}
+.story-card {
+  width: 32.5rem;
+  max-width: 100%;
+  background-color: var(--color-espresso);
+  border: 1px solid var(--color-white);
+  border-radius: 0;
+  padding: 2.25rem 2rem;
+  color: var(--color-white);
+}
+.story-tag {
+  display: inline-block;
+  background-color: var(--color-espresso);
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  font-family: var(--font-logo);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.3125rem 0.875rem;
+  border-radius: 0;
+  margin-bottom: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09375rem;
+}
+.story-heading {
+  font-family: var(--font-logo);
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: var(--color-white);
+}
+.story-heading .star {
+  font-size: 1.25rem;
+  vertical-align: middle;
+  color: var(--color-white);
+}
+.story-card p,
+div.story-card > p {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  font-weight: 200;
+  color: var(--color-white);
+  line-height: 1.6;
+  margin-bottom: 0.875rem;
+}
+.story-body p:last-child {
+  margin-bottom: 0;
+}
+.story-body strong {
+  font-weight: 500;
+  font-family: var(--font-h1);
+  color: var(--color-white);
+}
+
+/* ABOUT PAGE MARQUEE STRIPS */ 
+/* Youtube Ref: "You Can't Find a Better Infinite Marquee" */
+.about-marquee {
+  background-color: var(--color-blush-pink);
+  border-top: 0 solid var(--color-black);
+  border-bottom: 0 solid var(--color-black);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.75rem 0;
+  width: 100%;
+}
+.about-marquee .marquee-content {
+  display: inline-block;
+  animation: marquee-scroll 30s linear infinite;
+}
+.about-marquee span {
+  font-family: var(--font-logo);
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: var(--color-cotton-candy);
+  padding-right: 2.5rem;
+}
+@keyframes marquee-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* MISSION & VISION SECTION */
+
+.mission-vision-section {
+  background-color: var(--color-blush-pink);
+  padding: 3.75rem 1.25rem;
+  width: 100%;
+}
+.mission-vision-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.wavy-card {
+  width: 100%;
+  max-width: 32.5rem;
+  min-height: auto;
+  aspect-ratio: 520 / 380;            /* Preserves natural image dimensions */
+  background-image: url('../images/wavycard.png');
+  background-size: contain;           /* Keeps full frame visible without stretching */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+.card-title {
+  font-family: var(--font-h1);
+  font-size: 2rem;
+  font-weight: 300;
+  color:var(--color-white);
+  margin-bottom: 1.25rem;
+}
+.card-text {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 200;
+  line-height: 1.6;
+  color: var(--color-white);
+  max-width: 17.875rem;
+}
+.card-text strong {
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* RESPONSIVE DESIGN */
@@ -555,6 +767,36 @@ hero-title .title-line {
   body .footer-column {
     flex: 1 1 45%;
   }
+
+  /* ABOUT PAGE */
+  body .about-story-hero {
+    min-height: auto;
+    padding: 2.5rem 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  body .mission-vision-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  body .wavy-card {
+    width: 100%;
+    max-width: 32.5rem;
+    height: auto;
+    aspect-ratio: 520 / 380;
+    background-image: url('../images/wavycard.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2.5rem 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* MOBILE PHONES (Under 550px) */
@@ -567,5 +809,12 @@ hero-title .title-line {
   body .footer-storefront img,
   body .footer-storefront picture {
     margin: 0 auto;
+  }
+    body .card-title {
+    font-size: 1.25rem;
+  }
+  body .card-text {
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
 }
