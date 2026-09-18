@@ -75,6 +75,11 @@ All notable changes to the KY Bakery website are documented here.
 - Styled native HTML5 details/summary accordion elements with rotation transitions on expansion. 
 - Added custom styling and focus highlights for input fields, textareas, drop-down selects, and submit buttons.
 
+### Contact:
+- Created Contact Us page (`contact.html`) featuring store operating hours, direct contact info, and parking details.
+- Embedded Google Maps iframe pointing to the Hazelwood, Pretoria storefront location.
+- Added Contact page CSS layout rules in `css/style.css`, featuring a peach background theme, lemon chiffon map borders, and styled detail headers.
+
 ## Changed
 
 ### Home:
@@ -98,7 +103,12 @@ All notable changes to the KY Bakery website are documented here.
 ### Enquiries:
 - Integrated section anchor (`#enquiry-form-section`) allowing direct jumps from product card CTAs across the site. 
 - Updated header active navigation indicator for the Enquiries page.
-- Configured responsive breakpoint rules to stack the split FAQ and enquiry sections vertically on mobile screens. 
+- Configured responsive breakpoint rules to stack the split FAQ and enquiry sections vertically on mobile screens.
+
+### Contact:
+- Set "Contact Us" navigation link as active in header navigation bar.
+- Replaced contact layout with a responsive two-column flexbox design.
+- Added responsive CSS media queries to stack contact details and the map vertically on tablet and mobile viewports.
 
 ## Fixed
 - Updated "Enquire Now" CTA button links on product cards (`products.html`) to correctly navigate to the Enquiries form (`enquiries.html#enquiry-form-section`).
@@ -113,3 +123,5 @@ All notable changes to the KY Bakery website are documented here.
 - `Added Products page layout and catalog grid rules`
 - `Updates to enquiries page layout, FAQs, and custom booking form`
 - `Added layout, accordion, and form CSS rules for Enquiries page`
+- `Updates to Contact page structure, location details, and embedded map`
+- `Added layout and responsive styles for contact page`
