@@ -1,159 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knead You | Homepage</title>
+    <title>Home | Kneadforit.</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- HEADER / NAVIGATION -->
-    <header>
-	<img src="images/header banner.png" alt="Knead You bakery banner" width="100%">        
-	
-    <nav align="center">
-    <a href="home.html">HOME</a>
-    <a href="about.html">ABOUT US</a>
-    <a href="products.html">PRODUCTS</a>
-    <a href="enquiry.html">ENQUIRY</a>
-    <a href="contact.html">CONTACT</a>
-</nav>
-</header>
+<!-- HEADER SECTION -->
 
- <!-- MAIN CONTENT -->
+    <header class="header-nav-container">
+        <div class="nav-content">
+            <a href="home.html" class="brand-logo">
+                <picture>
+                    <source type="images/webp" srcset="../images/logo.webp">
+                    <img src="images/logo.png" alt="Kneadforit Logo">
+                </picture>
+                <span class="logo-text">Kneadforit.</span>
+            </a>            
+            <nav class="nav-item-container">
+                <a href="home.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="enquiries.html" class="nav-link">Enquiries</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
+        <!-- Scalloped Banner Shape -->
+        <div class="scallop-banner" aria-hidden="true">
+            <svg viewBox="0 0 1440 50" preserveAspectRatio="none">
+                <path d="M0,0 L1440,0 L1440,10 Q1350,40 1260,10 Q1170,40 1080,10 Q990,40 900,10 Q810,40 720,10 Q630,40 540,10 Q450,40 360,10 Q270,40 180,10 Q90,40 0,10 Z" fill="#DEEEF7"/>
+            </svg>
+        </div>
+    </header>
+
+<!-- HERO SECTION -->
+
     <main>
-
-        <!-- HERO SECTION -->
-        <section>
-
-    <img src="images/hero shot.png" alt="Freshly baked bread and pastries" width="100%">
-
-    <div>
-        <h1><em>You</em> Knead It. <em>We</em> Bake It.</h1>
-
-        <p>
-            Are you prepared to bake, knead, and make?
-            Learn new abilities in a friendly, enjoyable
-            setting by enrolling in our practical baking lessons.
-            There's always something wonderful to uncover,
-            regardless of your level of baking experience.
-            Let's make something incredible, so reserve your space!
-        </p>
-
-        <a href="enquiry.html">BOOK A CLASS</a>
-    </div>
-
-</section>
-
-
-        <!-- PRODUCTS SECTION -->
-        <section>
-
-            <header>
-                <h1>
-                    For <em>Every</em> Craving.
-                </h1>
-                <a href="products.html">MORE PRODUCTS &rarr;</a>
-            </header>
-
-            <!-- PRODUCT 1 -->
-            <article>
-                <img src="images/bento c1.png" alt="Bento cake">
-                <h3>BENTO CAKES</h3>
-
-                <p>
-		            Delicious bento cakes that can be 
-		            customised for every occasion.
-                </p>
-
-                <a href="products.html">VIEW PRODUCTS</a>
-            </article>
-
-            <!-- PRODUCT 2 -->
-            <article>
-                <img src="images/cup c1.png" alt="Cupcakes">
-                <h3>CUPCAKES</h3>
-                <p>
-		            A variety of freshly made cupcakes 
-		            that are ideal for sharing.
-                </p>
-                <a href="products.html">VIEW PRODUCTS</a>
-            </article>
-
-            <!-- PRODUCT 3 -->
-            <article>
-                <img src="images/cookie c1.png" alt="Freshly baked cookie">
-                <h3>COOKIES</h3>
-                <p>
-                    Cookies freshly baked to make you happy.
-                </p>
-                <a href="products.html">VIEW PRODUCTS</a>
-            </article>
-
-            <!-- PRODUCT 4 -->
-            <article>
-                <img src="images/bread c1.png" alt="Freshly baked bread">
-                <h3>BREADS</h3>
-                <p>
-                    Quality ingredients are used to make bread from scratch.
-                </p>
-                <a href="products.html">VIEW PRODUCTS</a>
-            </article>
-
+        <section class="hero-section">
+            <div class="hero-container">
+                <!-- Left Image Side -->
+                <div class="hero-image-wrapper">
+                    <picture>
+                    <source media="(min-width: 960px)" srcset="./images/interior.jpg">
+                    <source media="(max-width: 960px)" srcset="./images/interior.jpg">
+                    <img src="./images/interior.jpg" alt="Knead For It Bakery Interior" class="hero-image">
+                    </picture>
+                </div>
+                <!-- Right Content Card Side -->
+                <div class="hero-content-card">
+                    <h1 class="hero-title">
+                        <span class="title-line">
+                            <span class="star-icon">✦</span><span class="text-italic">You</span> <span class="text-bold">Knead It.</span>
+                        </span>
+                        <span class="title-line">
+                            <span class="text-italic">We</span> <span class="text-bold">Bake It.</span><span class="star-icon">✦</span>
+                        </span>
+                    </h1>
+                    <p class="hero-body">
+                        Handcrafted <strong>bento cakes</strong>, <strong>fresh daily bakes</strong>, and 
+                        <strong>hands-on workshops</strong> right in the heart of Pretoria. Order your 
+                        favourite treats online or join us in the kitchen to master the art of baking.
+                    </p>
+                    <a href="products.html" class="hero-btn">BROWSE PRODUCTS</a>
+                </div>
+            </div>
         </section>
-
+        <!-- INFINITE MARQUEE BANNER -->
+        <div class="marquee-strip" aria-hidden="true">
+            <div class="marquee-content">
+                <span>SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦</span>
+            </div>
+            <div class="marquee-content">
+                <span>SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦</span>
+            </div>
+        </div>
+        <!-- BEST SELLER PRODUCTS SECTION -->
+        <section class="products-section">
+            <h2 class="products-title">⟡˙⋆ Neighborhood Essentials ⋆˙⟡</h2>
+            <div class="product-scroll-container">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                    <picture>
+                        <!-- format with fallback to png -->
+                        <source type="images/webp" srcset="./images/strawberry.webp">
+                        <img src="./images/stawberry.png" alt="Vanilla Berry Cloud Bento Cake">
+                    </picture>
+                    </div>
+                    <span class="product-category">Bento cake</span>
+                    <h3 class="product-name">Vanilla Berry Cloud</h3>
+                    <p class="product-description">
+                        Fluffy vanilla sponge features sweet strawberry jam and whipped cream for a classic nostalgic treat
+                        single-serve bento treat.
+                    </p>
+                    <a href="products.html#bento-cakes" class="view-btn">View Bento Cakes ⭑.ᐟ</a>   
+                </article>
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="./images/ferrero.webp">
+                            <img src="./images/ferrero.png" alt="Ferrero Rocher Cupcake">
+                        </picture>
+                    </div>
+                    <span class="product-category">Cupcake</span>
+                    <h3 class="product-name">Ferrero Rocher</h3>
+                    <p class="product-description">
+                        Decadent chocolate cupcake features velvety Rocher frosting, finished with a whole 
+                        Ferrero and crunchy hazelnut pieces.
+                    </p>
+                    <a href="products.html#cupcakes" class="view-btn">More Cupcakes ⭑.ᐟ</a>
+                </article>
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="./images/ferrero.webp">
+                            <img src="images/sandwich.png" alt="Funfetti Sandwich Cookie">
+                        </picture>
+                    </div>
+                    <span class="product-category">Cookie</span>
+                    <h3 class="product-name">Funfetti Sandwich</h3>
+                    <p class="product-description">
+                        Rich, chewy double-chocolate cookies layered with fluffy buttercream, topped with 
+                        rainbow sprinkles for a colourful bite.
+                    </p>
+                    <a href="products.html#cookies" class="view-btn">View Cookies ⭑.ᐟ</a>
+                </article>
+                <!-- Product 4 -->
+                <article class="product-card">
+                    <div class="product-image-wrapper">
+                        <picture>
+                            <source type="images/webp" srcset="./images/sourdough.webp">
+                            <img src="images/sourdough.png" alt="Heritage Seeded Sourdough Bread">
+                        </picture>
+                    </div>
+                    <span class="product-category">Bread</span>
+                    <h3 class="product-name">Seeded Sourdough</h3>
+                    <p class="product-description">
+                        Small batch loaf slow-fermented for a crisp, golden crust and an airy, chewy interior with 
+                        a distinctive, tangy sourdough finish with sesame seeds.
+                    </p>
+                    <a href="products.html#breads" class="view-btn">View Breads ⭑.ᐟ</a>
+                </article>
+            </div>
+        </section>
     </main>
 
 <!-- FOOTER -->
-	<footer>
 
-    <div class="footer-content">
-        <div>
-            <img src="images/wordmark.png" alt="Knead You bakery" width="20%" height="80px">
-            <p>
-                Where Hearts<br>
-                Gather,<br>
-                Dough Rises.
-            </p>
+    <footer class="site-footer">
+    <div class="footer-container">    
+        <!-- Storefront Illustration -->
+        <div class="footer-column footer-storefront">
+            <picture>
+                <source type="images/webp" srcset="./images/store.webp">
+                <img src="images/store.png" alt="Knead For It Storefront">
+            </picture>
         </div>
-
-        <div>
-            <h3>EXPLORE</h3>
-            <p>
-                <a href="about.html">ABOUT US</a><br>
-                <a href="products.html">PRODUCTS</a><br>
-                <a href="enquiry.html">ENQUIRIES</a>
-            </p>
+        <!-- Explore Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="enquiries.html">Baking Classes</a></li>
+            <li><a href="#enquiry-form-section">Custom Enquiries</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
         </div>
-
-        <div>
-            <h3>SAY <em>HELLO</em></h3>
-            <p>
-                159 Bakery Street<br>
-                HazelWood, Pretoria, 
-                0001<br>
-                012 444 6767
-            </p>
+        <!-- Support Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+            <li><a href="#">How to Order</a></li>
+            <li><a href="#">Order FAQs</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
         </div>
-
-        <div>
-            <h3>FOLLOW US</h3>
-            <p>
-                <a href="#">X</a>
-                <a href="#">Instagram</a>
-                <a href="#">TikTok</a>
-            </p>
+        <!-- Socials Links -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Socials</h4>
+        <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
         </div>
-
+        <!-- Location Details -->
+        <div class="footer-column">
+        <h4 class="footer-heading">Visit Us</h4>
+        <address class="footer-address">
+            16th Street<br>
+            Hazelwood<br>
+            Pretoria<br>
+            0081<br><br>
+            8am - 5pm daily
+        </address>
+        </div>
     </div>
-
-    <p class="copyright">
-        KNEAD YOU © 2022. ALL RIGHTS RESERVED.
-    </p>
-    <img src="images/footer banner.png" alt="Knead You footer banner" width="100%">
-</footer>
-
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+        <p>KNEAD FOR IT &copy; 2026. ALL RIGHTS RESERVED.</p>
+    </div>
+    </footer>
+    
 </body>
-
 </html>
