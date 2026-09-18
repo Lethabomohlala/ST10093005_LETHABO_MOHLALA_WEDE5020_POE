@@ -64,7 +64,16 @@ All notable changes to the KY Bakery website are documented here.
 - Expanded `css/style.css` with dedicated Products catalog styling rules.
 - Added smooth scrolling behaviors and anchor scroll-margin offsets for category sections.
 - Configured 4-column CSS Grid layout (`.product-grid`) for product item cards.
-- Added drop-shadow glow effects on product image wrappers and interactive CTA button hover transitions
+- Added drop-shadow glow effects on product image wrappers and interactive CTA button hover transitions.
+
+### Enquiries:
+- Created interactive baking classes booking hero section (`.book-section`). 
+- Implemented accessible HTML5 `<details>` FAQ accordion section for ordering and classes enquiries. 
+- Built custom enquiry form featuring full name, contact, dropdown category selection, and message input fields.
+- Expanded `css/style.css` with layout rules for the Enquiries page. 
+- Applied seamless tiled background patterns to FAQ and enquiry form split sections. 
+- Styled native HTML5 details/summary accordion elements with rotation transitions on expansion. 
+- Added custom styling and focus highlights for input fields, textareas, drop-down selects, and submit buttons.
 
 ## Changed
 
@@ -86,6 +95,13 @@ All notable changes to the KY Bakery website are documented here.
 - Updated header and footer components to match site-wide brand styling.
 - Added responsive media queries scaling product card grid from 4 columns to 2 columns (tablet) and single column (mobile).
 
+### Enquiries:
+- Integrated section anchor (`#enquiry-form-section`) allowing direct jumps from product card CTAs across the site. 
+- Updated header active navigation indicator for the Enquiries page.
+- Configured responsive breakpoint rules to stack the split FAQ and enquiry sections vertically on mobile screens. 
+
+## Fixed
+- Updated "Enquire Now" CTA button links on product cards (`products.html`) to correctly navigate to the Enquiries form (`enquiries.html#enquiry-form-section`).
 
 ## Commits
 - `Updates to home page`
@@ -95,3 +111,5 @@ All notable changes to the KY Bakery website are documented here.
 - `Added About Us page CSS rules to style.css`
 - `Updates to products page layout and catalog content`
 - `Added Products page layout and catalog grid rules`
+- `Updates to enquiries page layout, FAQs, and custom booking form`
+- `Added layout, accordion, and form CSS rules for Enquiries page`
