@@ -155,3 +155,34 @@ function initScrollAnimations() {
 
     animatedElements.forEach(el => observer.observe(el));
 }
+
+/* ABOUT PAGE */
+// INTERACTIVE TABS & GALLERY LIGHTBOX
+document.addEventListener("DOMContentLoaded", () => {
+    // Milestone Tabs Logic
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanels = document.querySelectorAll(".tab-panel");
+
+    if (tabButtons.length > 0) {
+        tabButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                // Remove active class from all buttons
+                tabButtons.forEach(b => {
+                    b.classList.remove("active");
+                    b.style.background = "var(--color-white)";
+                    b.style.fontWeight = "normal";
+                });
+                // Hide all panels
+                tabPanels.forEach(p => p.style.display = "none");
+
+                // Activate clicked button and panel
+                btn.classList.add("active");
+                btn.style.background = "var(--color-blush-pink)";
+                btn.style.fontWeight = "500";
+
+                const targetTab = document.getElementById(btn.getAttribute("data-tab"));
+                if (targetTab) targetTab.style.display = "block";
+            });
+        });
+    }
+});

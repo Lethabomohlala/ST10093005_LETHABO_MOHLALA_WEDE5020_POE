@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Kneadforit.</title>
+    <title>About Us | The Heart & Story Behind Kneadforit. Pretoria</title>
+    <meta name="description" content="Born in Hazelwood with a simple passion: to bake, connect, and share the art of breads and bento cakes. Our story is one of community, creativity, and the joy of baking.">
+    <meta name="keywords" content="about kneadforit, bakers pretoria, hazelwood bakery story, community baking pretoria, bento cake bakers hazelwood, kneadforit story, kneadforit bakers">
+    <meta name="robots" content="index, follow">
+
+<!-- CSS STYLESHEET -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Google Fonts -->
+<!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -14,13 +19,15 @@
 
 <body>
 
-<!-- HEADER SECTION -->
+<!-- JAVASCRIPT FILE -->
+    <script src="js/script.js"></script>
 
+<!-- HEADER SECTION -->
     <header class="header-nav-container">
         <div class="nav-content">
             <a href="index.html" class="brand-logo">
                 <picture>
-                    <source type="images/webp" srcset="../images/logo.webp">
+                    <source type="images/webp" srcset="images/logo.webp">
                     <img src="images/logo.png" alt="Kneadforit Logo">
                 </picture>
                 <span class="logo-text">Kneadforit.</span>
@@ -42,21 +49,20 @@
     </header>
 
 <!--STORY HERO SECTION-->
-
     <main>
-        <section class="about-story-hero">
+        <section class="about-story-hero animate-on-scroll">
         <!-- Continuous Horizontal Image Slider -->
         <div class="story-slider-overflow">
             <div class="story-slider-track">
             <!-- First Set -->
-            <div class="slide-item" style="background-image: url('../images/display1.png');"></div>
-            <div class="slide-item" style="background-image: url('../images/display2.png');"></div>
-            <div class="slide-item" style="background-image: url('../images/display3.png');"></div>
+            <div class="slide-item" style="background-image: url('images/display1.png');"></div>
+            <div class="slide-item" style="background-image: url('images/display2.png');"></div>
+            <div class="slide-item" style="background-image: url('images/display3.png');"></div>
             
             <!-- Duplicate Set for Infinite Seamless Loop -->
-            <div class="slide-item" style="background-image: url('../images/display1.png');"></div>
-            <div class="slide-item" style="background-image: url('../images/display2.png');"></div>
-            <div class="slide-item" style="background-image: url('../images/display3.png');"></div>
+            <div class="slide-item" style="background-image: url('images/display1.png');"></div>
+            <div class="slide-item" style="background-image: url('images/display2.png');"></div>
+            <div class="slide-item" style="background-image: url('images/display3.png');"></div>
             </div>
         </div>
         <!-- Content Container Overlay -->
@@ -85,10 +91,36 @@
             </div>
         </div>
         </section>
+
+        <!-- INTERACTIVE MILESTONE TABS SECTION -->
+        <section class="milestone-tabs-section animate-on-scroll">
+            <div class="milestone-container">
+                <h2 class="milestone-title">｡꩜˚⋆ Our Journey In Motion ⋆˚꩜｡</h2>
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="tab-2022">2022 | The Beginning</button>
+                    <button class="tab-btn" data-tab="tab-2024">2024 | Workshop Expansion</button>
+                    <button class="tab-btn" data-tab="tab-2026">2026 | Community Landmark</button>
+                </div>
+                
+                    <div id="tab-2022" class="tab-panel">
+                        <h3 class="panel-heading">Founding Roots in Pretoria</h3>
+                        <p class="panel-text">We built our foundation on warm, crusty loaves of sourdough. As Kneadforit. expanded, we answered sweet cravings by thoughtfully introducing custom bento cakes, cookies, and cupcakes to our daily lineup.</p>
+                    </div>
+                    <div id="tab-2024" class="tab-panel" style="display: none;">
+                        <h3 class="panel-heading">Launching Hands-On Classes</h3>
+                        <p class="panel-text">Driven by an overwhelming request from our local food lovers, we opened our kitchen doors for hands-on baking classes. Beyond teaching flour-dusted fundamentals, these workshops became a space to genuinely connect with our community and bake for a purpose-raising funds for meaningful local charities.</p>
+                    </div>
+                    <div id="tab-2026" class="tab-panel" style="display: none;">
+                        <h3 class="panel-heading">Digital Innovation & New Horizons</h3>
+                        <p class="panel-text">Cravings shouldn't be limited by distance. We built our digital home so that sweet lovers across South Africa can experience the magic of Kneadforit.—bringing our artisan creations straight to your door, no matter where you are.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
 <!-- MISSION & VISION SECTION -->
-
         <!-- Top Marquee Divider -->
         <div class="about-marquee">
         <div class="marquee-content">
@@ -97,7 +129,7 @@
         </div>
         </div>
         <!-- Mission & Vision Section -->
-        <section class="mission-vision-section">
+        <section class="mission-vision-section animate-on-scroll">
         <div class="mission-vision-container">   
             <!-- Our Mission -->
             <article class="wavy-card">
@@ -127,14 +159,31 @@
         </div>
         </div>
 
-<!-- FOOTER SECTION -->
+<!-- PRODUCT LIGHTBOX MODAL (Shared with script.js) -->
+    <div id="product-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-col">
+                    <img id="modal-img" src="" alt="Gallery Preview">
+                </div>
+                <div class="modal-info-col">
+                    <span id="modal-category" class="product-category">Kneadforit Gallery</span>
+                    <h2 id="modal-title" class="product-name">Kitchen Snapshot</h2>
+                    <p id="modal-description" class="product-description">A glimpse into our daily artisan baking process in Pretoria.</p>
+                    <a href="enquiries.html#enquiry-form-section" class="enquire-btn">Book a Class</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+<!-- FOOTER SECTION -->
     <footer class="site-footer">
     <div class="footer-container"> 
         <!-- Storefront Illustration -->
         <div class="footer-column footer-storefront">
             <picture>
-                <source type="images/webp" srcset="./images/store.webp">
+                <source type="images/webp" srcset="images/store.webp">
                 <img src="images/store.png" alt="Knead For It Storefront">
             </picture>
         </div>
@@ -163,10 +212,10 @@
         <div class="footer-column">
         <h4 class="footer-heading">Socials</h4>
         <ul class="footer-links">
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/login">TikTok</a></li>
+            <li><a href="https://x.com/">Twitter</a></li>
+            <li><a href="https://web.facebook.com/login/?locale=en_GB&_rdc=1&_rdr#">Facebook</a></li>
         </ul>
         </div>
         <!-- Location Details -->
@@ -180,13 +229,12 @@
             8am - 5pm daily
         </address>
         </div>
-
     </div>
     <!-- Bottom Copyright -->
     <div class="footer-bottom">
         <p>KNEAD FOR IT &copy; 2026. ALL RIGHTS RESERVED.</p>
     </div>
     </footer>
-    
+
 </body>
 </html>
