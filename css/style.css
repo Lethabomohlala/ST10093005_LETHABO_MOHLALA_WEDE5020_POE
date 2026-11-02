@@ -1731,7 +1731,7 @@ main, .main-container {
 .lightbox-display-card {
   width: 22rem;
   height: 30rem;
-  background-image: url('images/lb_background.png');
+  background-image: url('../images/lb_background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
