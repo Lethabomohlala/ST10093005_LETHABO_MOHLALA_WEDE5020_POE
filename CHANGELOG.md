@@ -147,6 +147,7 @@ All notable changes to the KY Bakery website are documented here.
 - Added a live search input toolbar allowing users to instantly search products by keyword or description.
 - Added interactive category filter buttons (All Treats, Bento Cakes, Cupcakes, Cookies, Breads) powered by JavaScript filtering.
 - Added a custom 500px × 600px vertical lightbox modal displaying the product image and name.
+- Added responsive scroll indicator arrows for featured products.
 
 #### Enquiries:
 - Added comprehensive client-side JavaScript validation for all enquiry form fields (Name, Phone number format, Email format, selection requirements, and minimum message length).
@@ -184,6 +185,7 @@ All notable changes to the KY Bakery website are documented here.
 - Updated event handling to safely attach click listeners programmatically, resolving string escaping issues.
 - Updated `script.js` with an index-tracking controller to support next/previous item browsing and thumbnail selection across the product catalog.
 - Added event listeners for keyboard arrow keys `(ArrowLeft, ArrowRight)` and the Escape key to allow seamless keyboard navigation and closing of the lightbox gallery.
+- Updated file path link from `style.css` to `css/style.css` for products page.
 
 #### Enquiries:
 - Updated the enquiry form HTML element with the novalidate attribute to support custom JavaScript validation handlers.
@@ -225,6 +227,9 @@ All notable changes to the KY Bakery website are documented here.
 - Fixed responsive media queries (`@media screen and (max-width: 65em)` and `max-width: 38em`) to ensure forms, product grids, and info rows stack gracefully on mobile and tablet viewports.
 - Fixed form element focus and validation error state borders (`var(--color-crushed-berry)`) across `enquiries.html` and `contact.html`.
 - Fixed side padding for mobile viewports' product catalogue titles and search fields.
+- Fixed wavycard background image path to use relative `../images` URL for GitHub Pages.
+- Fixed lightbox background image path to use relative `../images` URL for GitHub Pages.
+- Ensured that wavycard background image is explicitly set in mobile media query and set explicit espresso text color on milestone tab buttons.
 
 ### Commits
 - `Updated the home.html to index.html and added the javascript file.`
@@ -238,3 +243,8 @@ All notable changes to the KY Bakery website are documented here.
 - `Fixed horizontal padding to products category wrapper on mobile viewports.`
 - `Updated interactive carousel lightbox with thumbnail strip.`
 - `Implemented gallery lightbox CSS and script controllers.`
+- `Fixed wavycard background image path to use relative ../images URL for GitHub Pages.`
+- `Fixed lightbox background image path to use relative ../images URL for GitHub Pages.`
+- `Updated file path link from style.css to css/style.css for products page.`
+- `Ensured that wavycard background image is explicitly set in mobile media query and set explicit espresso text color on milestone tab buttons.`
+- `Added responsive scroll indicator arrows for featured products.`
