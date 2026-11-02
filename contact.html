@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us! | Kneadforit.</title>
+    <title>Kneadforit. | Contact Us & Visit Our Bakery</title>
+    <meta name="description" content="Find us on 16th Street! Stop by for fresh treats, check our hours, map directions, or send us a message. We’re here to answer your questions.">
+    <meta name="keywords" content="kneadforit address, hazelwood bakery location, pretoria bakery contact, bakery opening hours pretoria, bakery map directions, contact kneadforit, bakery enquiries pretoria">
+    <meta name="robots" content="index, follow">
+
+<!-- CSS STYLESHEET -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Google Fonts -->
+<!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -14,13 +19,15 @@
 
 <body>
 
-<!-- HEADER SECTION -->
+<!-- JAVASCRIPT FILE -->
+    <script src="js/script.js"></script>
 
+<!-- HEADER SECTION -->
     <header class="header-nav-container">
         <div class="nav-content">
             <a href="index.html" class="brand-logo">
                 <picture>
-                    <source type="images/webp" srcset="../images/logo.webp">
+                    <source type="images/webp" srcset="images/logo.webp">
                     <img src="images/logo.png" alt="Kneadforit Logo">
                 </picture>
                 <span class="logo-text">Kneadforit.</span>
@@ -41,71 +48,140 @@
         </div>
     </header>
 
-<!--CONTACT US SECTION-->
-
+<!-- CONTACT HERO SECTION WITH BAKERY BACKGROUND -->
     <main class="contact-main">
-        <!-- Hero Section -->
-        <section class="contact-hero">
-            <h1 class="contact-title">Let’s Keep The Conversation Baking (๑ᵔ⤙ᵔ๑)</h1>
-            <p class="contact-subtitle">
-            <strong>Have a question or planning a visit?</strong> Find our Pretoria kitchen address, operating hours, and direct contact details below. Stop by for fresh daily bakes or get in touch, we’d love to connect!
-            </p>
+        <section class="contact-hero animate-on-scroll">
+            <picture>
+                <source type="images/webp" srcset="images/bakery.webp">
+                <img src="images/bakery.png" alt="Knead For It Bakery Counter">
+            </picture>
+            <div class="contact-hero-content">
+                <h1 class="contact-title">Let’s Keep The Conversation Baking <span>•⩊•</span></h1>
+                <p class="contact-subtitle">
+                    <strong>Have a question or planning a visit?</strong> Find our Pretoria kitchen address, operating hours, and direct contact details below. Stop by for fresh daily bakes or get in touch, we’d love to connect!
+                </p>
+            </div>
         </section>
 
-        <!-- Split Section: Info Details + Map -->
-        <section class="contact-content-section">
-            <div class="contact-container">
-            <!-- Left Details -->
-            <div class="contact-details-col">
-                <h2 class="col-heading">Get In Touch!</h2>
-                <div class="info-group">
-                <h3 class="info-label">Physical Address</h3>
-                <p class="info-value">16th Street<br>Hazelwood<br>Pretoria<br>0081</p>
+        <!-- Split Section: Contact Form (Left) + Info & Map Grid (Right) -->
+        <section class="contact-content-section animate-on-scroll">
+            <div class="contact-layout-grid">
+                
+                <!-- LEFT COLUMN: Contact Form -->
+                <div class="contact-form-column">
+                    <h2 class="contact-col-heading">We’re Here To Help ⭑.ᐟ</h2>
+                    <form class="enquiry-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="contact-name">Full Name *</label>
+                            <input type="text" id="contact-name" placeholder="Your Name and surname" required>
+                            <span class="error-text" id="contact-name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone Number *</label>
+                            <input type="tel" id="contact-phone" placeholder="e.g. 012 999 8767" required>
+                            <span class="error-text" id="contact-phone-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address *</label>
+                            <input type="email" id="contact-email" placeholder="you@example.com" required>
+                            <span class="error-text" id="contact-email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-reason">Reason for Contact *</label>
+                            <div class="select-wrapper">
+                                <select id="contact-reason" required>
+                                    <option value="" disabled selected>What is the reason for your contact?</option>
+                                    <option value="general-query">General Question</option>
+                                    <option value="store-visit">Store Visit</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="collaboration">Collaboration</option>
+                                </select>
+                            </div>
+                            <span class="error-text" id="contact-reason-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" rows="4" placeholder="We’re all ears-what’s on your mind?" required></textarea>
+                            <span class="error-text" id="contact-message-error"></span>
+                        </div>
+                        <button type="submit" class="btn-submit contact-submit-btn">SEND MESSAGE</button>
+                    </form>
                 </div>
-                <div class="info-group">
-                <h3 class="info-label">Phone Number</h3>
-                <p class="info-value">012 444 8787</p>
+
+                <!-- RIGHT COLUMN: Get In Touch Details & Map -->
+                <div class="contact-info-map-column">
+                    <h2 class="contact-col-heading">Get In Touch ⭑.ᐟ</h2>
+                    
+                    <div class="contact-info-grid-row">
+                        <div class="info-group">
+                            <h3 class="info-label">Physical Address</h3>
+                            <p class="info-value">16th Street<br>Hazelwood<br>Pretoria<br>0081</p>
+                        </div>
+                        <div class="info-group">
+                            <h3 class="info-label">Phone Number</h3>
+                            <p class="info-value">012 444 6767</p>
+                        </div>
+                        <div class="info-group">
+                            <h3 class="info-label">Email Address</h3>
+                            <p class="info-value">kneadforitenquires<br>@gmail.com</p>
+                        </div>
+                        <div class="info-group">
+                            <h3 class="info-label">Trading hours</h3>
+                            <p class="info-value">Mon to Fri | 8 am - 5 pm<br>Sat | 8 am - 3 pm<br>Sun | Closed</p>
+                        </div>
+                        <div class="info-group">
+                            <h3 class="info-label">Parking & Pickup Info</h3>
+                            <p class="info-value">Free customer parking behind the bakery off 16th Street.</p>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Map Container -->
+                    <div class="contact-map-wrapper">
+                        <div class="map-frame-wrapper">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.2073169370049!2d28.25464096960395!3d-25.77620229858393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9560e2ded15b89%3A0x14bca0dfeebf2925!2s10%2016th%20St%2C%20Hazelwood%2C%20Pretoria%2C%200081!5e0!3m2!1sen!2sza!4v1789680920306!5m2!1sen!2sza" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="strict-origin-when-cross-origin">
+                            </iframe>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="info-group">
-                <h3 class="info-label">Email Address</h3>
-                <p class="info-value">hello@kneadforit.co.za</p>
-                </div>
-                <div class="info-group">
-                <h3 class="info-label">Trading hours</h3>
-                <p class="info-value">Mon to Fri | 8 am - 5 pm<br>Sat | 8 am - 3 pm<br>Sun | Closed</p>
-                </div>
-                <div class="info-group">
-                <h3 class="info-label">Parking & Pickup Info</h3>
-                <p class="info-value">Free customer parking behind the bakery off 16th Street.</p>
-                </div>
-            </div>
-            <!-- Right Map Container -->
-            <div class="contact-map-col">
-                <h2 class="col-heading">Visit Us!</h2>
-                <div class="map-frame-wrapper">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.2073169370049!2d28.25464096960395!3d-25.77620229858393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9560e2ded15b89%3A0x14bca0dfeebf2925!2s10%2016th%20St%2C%20Hazelwood%2C%20Pretoria%2C%200081!5e0!3m2!1sen!2sza!4v1789680920306!5m2!1sen!2sza" 
-                    width="580" 
-                    height="520" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="strict-origin-when-cross-origin">
-                </iframe>
-                </div>
-            </div>
+
             </div>
         </section>
     </main>
 
-<!-- FOOTER SECTION -->
+<!-- CONTACT CONFIRMATION MODAL -->
+    <div id="contact-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content confirmation-modal-content">
+            <button class="modal-close" id="contact-modal-close-btn" aria-label="Close Modal">&times;</button>
+            <div class="confirmation-body">
+                <h3 class="confirmation-title">✦ Message Sent! ✦</h3>
+                <p class="confirmation-subtitle">Thank you, <span id="contact-conf-name"></span>. Your message has been compiled and ready to send to <strong>kneadforitenquires@gmail.com</strong>.</p>
+                
+                <div class="confirmation-details-box">
+                    <p><strong>Reason for Contact:</strong> <span id="contact-conf-reason"></span></p>
+                    <p><strong>Status:</strong> Successfully Validated & Processed</p>
+                </div>
+                
+                <p class="confirmation-note">Our team will review your message and get back to you within 24 hours.</p>
+                <button type="button" class="btn-submit confirmation-ok-btn" id="contactModalCloseAction">GOT IT ⭑.ᐟ</button>
+            </div>
+        </div>
+    </div>
 
+<!-- FOOTER SECTION -->
     <footer class="site-footer">
     <div class="footer-container">    
         <!-- Storefront Illustration -->
         <div class="footer-column footer-storefront">
             <picture>
-                <source type="images/webp" srcset="./images/store.webp">
+                <source type="images/webp" srcset="images/store.webp">
                 <img src="images/store.png" alt="Knead For It Storefront">
             </picture>
         </div>
@@ -134,10 +210,10 @@
         <div class="footer-column">
         <h4 class="footer-heading">Socials</h4>
         <ul class="footer-links">
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/login">TikTok</a></li>
+            <li><a href="https://x.com/">Twitter</a></li>
+            <li><a href="https://web.facebook.com/login/?locale=en_GB&_rdc=1&_rdr#">Facebook</a></li>
         </ul>
         </div>
         <!-- Location Details -->
@@ -157,6 +233,6 @@
         <p>KNEAD FOR IT &copy; 2026. ALL RIGHTS RESERVED.</p>
     </div>
     </footer>
-    
+
 </body>
 </html>
