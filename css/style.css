@@ -748,13 +748,16 @@ div.story-card > p {
 .products-category-wrapper {
   width: 100%;
   max-width: 80.625rem;
-  padding-top: 3.75rem; 
+  padding-top: 3.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   text-align: center;
+  box-sizing: border-box;
 }
 .category-main-title {
   font-family: var(--font-logo);
