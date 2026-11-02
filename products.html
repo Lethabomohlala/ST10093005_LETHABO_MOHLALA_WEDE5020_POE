@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
 
 <!-- CSS STYLESHEET -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
 <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
 <body>
 
 <!-- JAVASCRIPT FILE -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 
 <!-- HEADER SECTION -->
     <header class="header-nav-container">
@@ -83,19 +83,26 @@
         </section>
     </main>
 
-<!-- PRODUCT LIGHTBOX MODAL -->
-    <div id="products-page-modal" class="products-modal-overlay" aria-hidden="true">
-            <div class="products-modal-content">
-                <button class="products-modal-close" id="products-modal-close-btn" aria-label="Close Modal">&times;</button>
-                <div class="products-modal-body">
-                    <div class="products-modal-image-wrapper">
-                        <img id="products-modal-img" src="" alt="Product Preview">
-                    </div>
-                    <h2 id="products-modal-title" class="products-modal-name">Product Name</h2>
+<!-- PRODUCTS LIGHTBOX MODAL -->
+<div id="lightbox" class="lightbox-modal" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content-wrapper">
+        <div class="lightbox-main-view">
+            <button class="lightbox-prev" id="lightbox-prev-btn" aria-label="Previous Treat">&#10094;</button>
+            <div class="lightbox-display-card">
+                <div class="lightbox-image-wrapper">
+                    <img id="lightbox-img" src="" alt="Product Preview">
                 </div>
+                <h2 id="lightbox-title" class="lightbox-title">Product Name</h2>
             </div>
+            <button class="lightbox-next" id="lightbox-next-btn" aria-label="Next Treat">&#10095;</button>
+        </div>
+        <!-- Bottom Thumbnail Strip -->
+        <div class="lightbox-thumbs-strip" id="lightbox-thumbs-strip">
+        <!-- Populated dynamically via JS -->
         </div>
     </div>
+</div>
     
 <!-- FOOTER SECTION -->
     <footer class="site-footer">
