@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Kneadforit.</title>
+    <title>Kneadforit. | Custom Bento Cakes & Bakery Pretoria</title>
+    <meta name="description" content="Baked fresh in the heart of Hazelwood, Pretoria. From crusty sourdough loaves to custom bento cakes, made with love daily.Order or visit us today!">
+    <meta name="keywords" content="bento cakes pretoria, bakery hazelwood, custom bento cakes, fresh sourdough pretoria, cupcakes pretoria, cookies pretoria, kneadforit bakery, kneadforit pretoria">
+    <meta name="author" content="Kneadforit Bakery">
+    <meta name="robots" content="index, follow">
+
+<!-- SOCIAL MEDIA META TAGS -->
+    <meta property="og:title" content="Kneadforit. | Custom Bento Cakes & Bakery Pretoria">
+    <meta property="og:description" content="Handcrafted bento cakes, chewy cookies, moist cupcakes and fresh sourdough breads baked daily in Hazelwood, Pretoria.">
+    <meta property="og:image" content="https://kneadforit.co.za/images/wrapperreal.jpg">
+    <meta property="og:url" content="https://kneadforit.co.za/index.html">
+    <meta property="og:type" content="website">
+
+<!-- CSS STYLESHEET -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Google Fonts -->
+<!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -14,14 +27,17 @@
 
 <body>
 
+<!-- JAVASCRIPT FILE -->
+    <script src="js/script.js"></script>
+
 <!-- HEADER SECTION -->
 
     <header class="header-nav-container">
         <div class="nav-content">
             <a href="index.html" class="brand-logo">
                 <picture>
-                    <source type="images/webp" srcset="../images/logo.webp">
-                    <img src="images/logo.png" alt="Kneadforit Logo">
+                    <source type="images/webp" srcset="./images/logo.webp">
+                    <img src="./images/logo.png" alt="Kneadforit Logo">
                 </picture>
                 <span class="logo-text">Kneadforit.</span>
             </a>            
@@ -41,17 +57,17 @@
         </div>
     </header>
 
-<!-- HERO SECTION -->
+    <!-- HERO SECTION -->
 
     <main>
-        <section class="hero-section">
+        <section class="hero-section animate-on-scroll">
             <div class="hero-container">
                 <!-- Left Image Side -->
                 <div class="hero-image-wrapper">
                     <picture>
-                    <source media="(min-width: 960px)" srcset="./images/interior.jpg">
-                    <source media="(max-width: 960px)" srcset="./images/interior.jpg">
-                    <img src="./images/interior.jpg" alt="Knead For It Bakery Interior" class="hero-image">
+                        <source media="(min-width: 960px)" srcset="./images/interior.jpg">
+                        <source media="(max-width: 960px)" srcset="./images/interior.jpg">
+                        <img src="./images/interior.jpg" alt="Knead For It Bakery Interior" class="hero-image">
                     </picture>
                 </div>
                 <!-- Right Content Card Side -->
@@ -73,7 +89,9 @@
                 </div>
             </div>
         </section>
-        <!-- INFINITE MARQUEE BANNER -->
+
+<!-- INFINITE MARQUEE BANNER -->
+
         <div class="marquee-strip" aria-hidden="true">
             <div class="marquee-content">
                 <span>SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦</span>
@@ -82,81 +100,39 @@
                 <span>SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦ SHOP NOW ✦</span>
             </div>
         </div>
-        <!-- BEST SELLER PRODUCTS SECTION -->
-        <section class="products-section">
+
+<!-- BEST SELLER PRODUCTS SECTION (DYNAMICALLY-JS) -->
+
+        <section class="products-section animate-on-scroll">
             <h2 class="products-title">⟡˙⋆ Neighborhood Essentials ⋆˙⟡</h2>
-            <div class="product-scroll-container">
-                <!-- Product 1 -->
-                <article class="product-card">
-                    <div class="product-image-wrapper">
-                    <picture>
-                        <!-- format with fallback to png -->
-                        <source type="images/webp" srcset="./images/strawberry.webp">
-                        <img src="./images/stawberry.png" alt="Vanilla Berry Cloud Bento Cake">
-                    </picture>
-                    </div>
-                    <span class="product-category">Bento cake</span>
-                    <h3 class="product-name">Vanilla Berry Cloud</h3>
-                    <p class="product-description">
-                        Fluffy vanilla sponge features sweet strawberry jam and whipped cream for a classic nostalgic treat
-                        single-serve bento treat.
-                    </p>
-                    <a href="products.html#bento-cakes" class="view-btn">View Bento Cakes ⭑.ᐟ</a>   
-                </article>
-                <!-- Product 2 -->
-                <article class="product-card">
-                    <div class="product-image-wrapper">
-                        <picture>
-                            <source type="images/webp" srcset="./images/ferrero.webp">
-                            <img src="./images/ferrero.png" alt="Ferrero Rocher Cupcake">
-                        </picture>
-                    </div>
-                    <span class="product-category">Cupcake</span>
-                    <h3 class="product-name">Ferrero Rocher</h3>
-                    <p class="product-description">
-                        Decadent chocolate cupcake features velvety Rocher frosting, finished with a whole 
-                        Ferrero and crunchy hazelnut pieces.
-                    </p>
-                    <a href="products.html#cupcakes" class="view-btn">More Cupcakes ⭑.ᐟ</a>
-                </article>
-                <!-- Product 3 -->
-                <article class="product-card">
-                    <div class="product-image-wrapper">
-                        <picture>
-                            <source type="images/webp" srcset="./images/ferrero.webp">
-                            <img src="images/sandwich.png" alt="Funfetti Sandwich Cookie">
-                        </picture>
-                    </div>
-                    <span class="product-category">Cookie</span>
-                    <h3 class="product-name">Funfetti Sandwich</h3>
-                    <p class="product-description">
-                        Rich, chewy double-chocolate cookies layered with fluffy buttercream, topped with 
-                        rainbow sprinkles for a colourful bite.
-                    </p>
-                    <a href="products.html#cookies" class="view-btn">View Cookies ⭑.ᐟ</a>
-                </article>
-                <!-- Product 4 -->
-                <article class="product-card">
-                    <div class="product-image-wrapper">
-                        <picture>
-                            <source type="images/webp" srcset="./images/sourdough.webp">
-                            <img src="images/sourdough.png" alt="Heritage Seeded Sourdough Bread">
-                        </picture>
-                    </div>
-                    <span class="product-category">Bread</span>
-                    <h3 class="product-name">Seeded Sourdough</h3>
-                    <p class="product-description">
-                        Small batch loaf slow-fermented for a crisp, golden crust and an airy, chewy interior with 
-                        a distinctive, tangy sourdough finish with sesame seeds.
-                    </p>
-                    <a href="products.html#breads" class="view-btn">View Breads ⭑.ᐟ</a>
-                </article>
+            <div class="product-scroll-container" id="featured-products-container">
+                <!-- Dynamically rendered-script.js -->
             </div>
         </section>
     </main>
 
-<!-- FOOTER -->
+<!-- PRODUCT LIGHTBOX MODAL -->
 
+    <div id="product-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-col">
+                    <img id="modal-img" src="" alt="Product Preview">
+                </div>
+                <div class="modal-info-col">
+                    <span id="modal-category" class="product-category">Category</span>
+                    <h2 id="modal-title" class="product-name">Product Name</h2>
+                    <p id="modal-description" class="product-description"></p>
+                    <p id="modal-price" class="product-price"></p>
+                    <a id="modal-enquire-link" href="enquiries.html#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- FOOTER -->
+ 
     <footer class="site-footer">
     <div class="footer-container">    
         <!-- Storefront Illustration -->
@@ -191,10 +167,10 @@
         <div class="footer-column">
         <h4 class="footer-heading">Socials</h4>
         <ul class="footer-links">
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/login">TikTok</a></li>
+            <li><a href="https://x.com/">Twitter</a></li>
+            <li><a href="https://web.facebook.com/login/?locale=en_GB&_rdc=1&_rdr#">Facebook</a></li>
         </ul>
         </div>
         <!-- Location Details -->
@@ -214,6 +190,6 @@
         <p>KNEAD FOR IT &copy; 2026. ALL RIGHTS RESERVED.</p>
     </div>
     </footer>
-    
+
 </body>
 </html>
