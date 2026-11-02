@@ -632,7 +632,7 @@ div.story-card > p {
   max-width: 32.5rem;
   min-height: auto;
   aspect-ratio: 520 / 380;            /* Preserves natural image dimensions */
-  background-image: url('images/wavycard.png');
+  background-image: url('../images/wavycard.png');
   background-size: contain;           /* Keeps full frame visible without stretching */
   background-repeat: no-repeat;
   background-position: center;
