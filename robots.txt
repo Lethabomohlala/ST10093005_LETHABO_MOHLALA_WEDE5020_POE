@@ -1,0 +1,10 @@
+# Robots.txt for Kneadforit. Bakery
+User-agent: *
+Allow: /
+
+# Disallow administrative or temporary directories (if applicable)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap Location
+Sitemap: https://kneadforit.co.za/sitemap.xml
