@@ -433,6 +433,7 @@ All notable changes to the KY Bakery website are documented here.
 - Fixed side padding for mobile viewports' product catalogue titles and search fields.
 - Fixed wavycard background image path to use relative `../images` URL for GitHub Pages.
 - Fixed lightbox background image path to use relative `../images` URL for GitHub Pages.
+- Fixed pattern background image path to use relative `../images` URL for GitHub Pages.
 - Ensured that wavycard background image is explicitly set in mobile media query and set explicit espresso text color on milestone tab buttons.
 
 ### Commits
@@ -452,6 +453,7 @@ All notable changes to the KY Bakery website are documented here.
 - `Updated file path link from style.css to css/style.css for products page.`
 - `Ensured that wavycard background image is explicitly set in mobile media query and set explicit espresso text color on milestone tab buttons.`
 - `Added responsive scroll indicator arrows for featured products.`
+- `Fixed pattern background image path to use relative ../images URL for GitHub Pages.`
 
 
 ## 14. Author
