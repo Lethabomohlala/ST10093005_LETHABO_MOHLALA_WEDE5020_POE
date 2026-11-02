@@ -346,3 +346,155 @@ function initProductsModalEvents() {
         if (e.key === "Escape") closeProductsModal();
     });
 }
+
+/* ENQUIRY FORM VALIDATION & AJAX SUBMISSION */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const enquiryForm = document.getElementById("enquiryForm");
+    if (!enquiryForm) return;
+
+    enquiryForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Clear previous errors
+        clearErrors();
+
+        // Form fields
+        const fullname = document.getElementById("fullname");
+        const phone = document.getElementById("phone");
+        const email = document.getElementById("email");
+        const enquiryType = document.getElementById("enquiry-type");
+        const message = document.getElementById("message");
+
+        let isValid = true;
+
+        // 1. Full Name Validation
+        if (fullname.value.trim() === "") {
+            showError("fullname", "Please enter your full name and surname.");
+            isValid = false;
+        }
+
+        // 2. Phone Number Validation (Regex for South African or general phone numbers)
+        const phoneRegex = /^[\d\s\-\+\(\)]{10,15}$/;
+        if (phone.value.trim() === "") {
+            showError("phone", "Please enter your phone number.");
+            isValid = false;
+        } else if (!phoneRegex.test(phone.value.trim())) {
+            showError("phone", "Please enter a valid phone number (at least 10 digits).");
+            isValid = false;
+        }
+
+        // 3. Email Address Validation (Regex)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.value.trim() === "") {
+            showError("email", "Please enter your email address.");
+            isValid = false;
+        } else if (!emailRegex.test(email.value.trim())) {
+            showError("email", "Please enter a valid email address (e.g., you@example.com).");
+            isValid = false;
+        }
+
+        // 4. Enquiry Type Validation
+        if (enquiryType.value === "") {
+            showError("enquiry-type", "Please select an enquiry type.");
+            isValid = false;
+        }
+
+        // 5. Message Validation (Minimum 10 characters)
+        if (message.value.trim() === "") {
+            showError("message", "Please enter a message or details for your enquiry.");
+            isValid = false;
+        } else if (message.value.trim().length < 10) {
+            showError("message", "Your message must be at least 10 characters long.");
+            isValid = false;
+        }
+
+        if (isValid) {
+            // Simulate AJAX Submission & Email Compilation
+            processEnquirySubmission({
+                recipient: "kneadforitenquiries@gmail.com",
+                fullname: fullname.value.trim(),
+                phone: phone.value.trim(),
+                email: email.value.trim(),
+                type: enquiryType.options[enquiryType.selectedIndex].text,
+                typeVal: enquiryType.value,
+                message: message.value.trim()
+            });
+        }
+    });
+
+    // Modal Close Triggers
+    const modal = document.getElementById("enquiry-modal");
+    const closeBtn = document.getElementById("modal-close-btn");
+    const okBtn = document.getElementById("modalCloseAction");
+
+    if (closeBtn) closeBtn.addEventListener("click", closeEnquiryModal);
+    if (okBtn) okBtn.addEventListener("click", closeEnquiryModal);
+    if (modal) {
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeEnquiryModal();
+        });
+    }
+});
+
+function showError(fieldId, message) {
+    const inputField = document.getElementById(fieldId);
+    const errorSpan = document.getElementById(`${fieldId}-error`);
+    if (inputField) inputField.style.borderColor = "var(--color-crushed-berry)";
+    if (errorSpan) errorSpan.textContent = message;
+}
+
+function clearErrors() {
+    const errorTexts = document.querySelectorAll(".error-text");
+    errorTexts.forEach(el => el.textContent = "");
+    
+    const inputs = document.querySelectorAll(".enquiry-form input, .enquiry-form select, .enquiry-form textarea");
+    inputs.forEach(el => el.style.borderColor = "var(--color-black)");
+}
+
+function processEnquirySubmission(data) {
+    // Determine dynamic response based on enquiry type (Cost/Availability)
+    let responseText = "";
+    switch (data.typeVal) {
+        case "custom-cake":
+            responseText = "Custom bento cakes range from R180 to R600. Available slots in 3-5 days.";
+            break;
+        case "class-booking":
+            responseText = "Baking workshop seats are available this weekend! Standard fee is R450 per person.";
+            break;
+        case "order-request":
+            responseText = "Daily bento boxes, cookies, and sourdough loaves are ready for daily pickup or local delivery.";
+            break;
+        case "volunteer-sponsor":
+            responseText = "Thank you for your willingness to support our community baking initiatives! We will schedule a discussion call.";
+            break;
+        default:
+            responseText = "We have received your query and our team will respond shortly.";
+            break;
+    }
+
+    // Populate Confirmation Modal
+    document.getElementById("conf-name").textContent = data.fullname;
+    document.getElementById("conf-type").textContent = data.type;
+    document.getElementById("conf-response").textContent = responseText;
+
+    // Show Modal
+    const modal = document.getElementById("enquiry-modal");
+    if (modal) {
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    // Reset Form
+    document.getElementById("enquiryForm").reset();
+}
+
+function closeEnquiryModal() {
+    const modal = document.getElementById("enquiry-modal");
+    if (modal) {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+}
