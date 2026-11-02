@@ -27,26 +27,35 @@ The website's main goals are to highlight Kneadforit's product line, allow local
 ## 4. Key Features and Functionality
 
 ### Home Page
-- **Continuous Image Slider |** Behind-the-scenes information and bakery displays are displayed on a smooth horizontal backdrop slider.
+- **Continuous Image Slider |** Behind-the-scenes information and bakery displays are showcased on a smooth horizontal backdrop slider.
 - **Brand Story Card |** An interactive floating card explaining the origins and significance of Kneadforit.
 - **Mission & Vision Wavy Cards |** Personalized cards with text marquee separators at the top and bottom.
- 
+- **Dynamic Featured Catalog & Lightbox Modals |** Programmatically rendered featured bento cakes, cookies, and sourdough cards featuring responsive quick-view click events and 500px x 600px interactive lightbox inspections.
+
 ### About Us
 - **Continuous Image Slider |** Behind-the-scenes information and bakery displays are displayed on a smooth horizontal backdrop slider.
 - **Brand Story Card |** An interactive floating card explaining the origins and significance of Kneadforit.
 - **Mission & Vision Wavy Cards |** Personalized cards with text marquee separators at the top and bottom.
+- **Interactive Milestone Tabs |** Clickable milestone tabs allowing users to explore historical brand growth and company chapters dynamically.
 
 ### Products
-- **Category Navigation |** Rapid jumps to Bento Cakes, Cupcakes, Cookies, and Breads are made possible using anchor links.
-- **Product Grid |** Customizable cards with links to enquiries, pricing tiers, descriptions, and high-resolution photos. 
+- **Category Navigation & Real-time Search |** Instant product filtering by category (Bento Cakes, Cupcakes, Cookies, Breads) and live keyword search bar querying product names and descriptions.
+- **Product Grid & Lightbox Integration |** Customizable cards linking directly to enquiries, pricing tiers, detailed descriptions, and isolated product modal previews.
 
 ### Enquiries
 - **Interactive FAQ Accordion |** Collapsible accordions made entirely of HTML and CSS with spinning `+`/`x` indication symbols.
-- **Custom Enquiry Form |** Custom-styled dropdown menus, input focus states, and inquiry classification (Order Request, Custom Order, Class Booking) are all included in this form.
+- **Robust Form Validation & AJAX Simulation |** Client-side JavaScript validation using Regex patterns for South African phone numbers and email addresses, minimum character length checks for messages, inline error notices, and dynamic input border feedback.
+- **Custom Confirmation Modal |** Dynamic success modal popups that compile recipient email routing (`kneadforitenquires@gmail.com`) and display contextual pricing or availability feedback depending on the selected enquiry type.
 
 ### Contact
-- **Location & Operating Hours |** The shop's address, phone number, email address, and weekly trade hours are presented clearly.
-- **Embedded Google Map |** The bakery in Hazelwood, Pretoria, is located on an interactive map iframe.
+- **Optimized Hero Banner & Layout |** Responsive bakery background counter hero image (`bakery.png`) with custom opacity and dark espresso typography matching visual design specifications.
+- **Location & Operating Hours |** Clear presentation of the Hazelwood, Pretoria physical address, direct phone lines, contact emails, trading hours, and parking information arranged in a 3-column grid.
+- **Embedded Google Map |** An interactive Google Maps `<iframe>` integration providing visual directions to 16th Street, Hazelwood.
+- **Validated Contact Form & Confirmation Flow |** Fully validated general contact form featuring reason-for-contact selectors, inline error handling, and a custom success confirmation modal.
+
+### Search Engine Optimization (SEO)
+- **Unique Page Metadata |** Tailored `<title>` tags, meta descriptions, and keywords implemented across all 5 site pages alongside Open Graph social sharing tags.
+- **Crawler & Indexing Control |** Root `robots.txt` instructions and a complete `sitemap.xml` file mapping canonical URLs, change frequencies, and priority weights.
 
 
 ## 5. Sitemap
@@ -62,57 +71,74 @@ The website's main goals are to highlight Kneadforit's product line, allow local
 ## 7. Technical Stack
 
 ### Core Technologies
-- **HTML5 |** (`<header>`, `<main>`, `<article>`, `<section>`, `<footer>`, `<picture>`) for structured content and improved screen-readability.
-- **CSS3 |** Custom stylesheet (`css/style.css`) using flexbox, CSS grid layouts, CSS custom properties (variables), keyframe animations (`@keyframes horizontalSlide`, `@keyframes marquee-scroll`), and dynamic responsive media queries.
+- **HTML5 |** Semantic markup (`<header>`, `<main>`, `<article>`, `<section>`, `<footer>`, `<picture>`) for structured content, accessibility, and improved screen-readability.
+- **CSS3 |** Custom centralized stylesheet (`css/style.css`) utilizing Flexbox, CSS Grid layouts, custom properties (CSS variables), keyframe animations (`@keyframes horizontalSlide`, `@keyframes marquee-scroll`), and responsive media queries.
+- **JavaScript (ES6+) |** Native client-side scripting for dynamic product catalog rendering, search/filtering, quick-view lightbox modals, Intersection Observer scroll animations, Regex-based form validation, and AJAX-style asynchronous submission simulation.
 
 ### External Assets & Fonts
 - **Google Fonts API |** Imported typography weights for primary, secondary, and accent styles (`Boldonse`, `Merriweather`, and `Poppins`).
-- **Embedded Maps |** Interactive Google Maps `<iframe>` integration for physical store location rendering.
+- **Embedded Maps |** Interactive Google Maps `<iframe>` integration for physical store location rendering and directions.
 
 ### Image & Asset Optimization
 - **WebP Image Format |** `.webp` media encoding for optimized site performance and faster load times.
-- **HTML5 `<picture>` Elements |** Multi-format image fallback strategy `.webp` graphics with `.png` and `.jpg` fallbacks.
+- **HTML5 `<picture>` Elements |** Multi-format image fallback strategy featuring `.webp` graphics with `.png` and `.jpg` fallbacks.
 - **Scalable Vector Graphics (SVG) |** Inline vector graphics for decorative UI elements (such as the scalloped banner divider).
 
+### Search Engine Optimization (SEO) & Indexing
+- **Meta Tags & Open Graph |** Unique page titles, meta descriptions, keywords, and Open Graph social sharing tags across all site pages.
+- **Crawler Directives (`robots.txt`) |** Root crawler instructions managing search engine indexing and sitemap references.
+- **XML Sitemap (`sitemap.xml`) |** Canonical URL mapping, last modified tracking, change frequencies, and priority weights for enhanced search discovery.
+
 ### Developer Tools & Version Control
-- **Git |** Distributed version control system for tracking incremental changes and page updates.
+- **Git |** Distributed version control system for tracking incremental changes and feature updates.
 - **GitHub |** Cloud-based repository hosting and changelog tracking via Conventional Commits.
-- **Visual Studio Code |** Primary IDE.
+- **Visual Studio Code |** Primary IDE equipped with Live Server for local development and testing.
 
 
-## 8. How to Run, Access, and Navigate the Files
+## 8. Lightbox Modals And Validations
+
+![Validations for Kneadforit.](./images/validations.png)
+
+## 9. How to Run, Access, and Navigate the Files
 
 ### Running the Website Locally
-**8.1. Clone the Repository:**
+**9.1. Clone the Repository:**
 - git clone [https://github.com/Lethabomohlala/ST10093005_LETHABO_MOHLALA_WEDE5020_POE.git](hhttps://github.com/Lethabomohlala/ST10093005_LETHABO_MOHLALA_WEDE5020_POE.git)
 
-**8.2. Open the Project Directory:**
+**9.2. Open the Project Directory:**
 - cd ST10093005_LETHABO_MOHLALA_WEDE5020_POE
 
-**8.3. Launch in Browser:**
-- Double-click home.html directly from your file explorer to launch it in any modern web browser.
-- Alternatively, if using VS Code, install the Live Server extension, right-click home.html, and select Open with Live Server.
+**9.3. Launch in Browser:**
+- Double-click index.html directly from your file explorer to launch it in any modern web browser.
+- Alternatively, if using VS Code, install the Live Server extension, right-click index.html, and select Open with Live Server.
 
-**8.4. Code Base Architecture & Navigation:**
+### Code Base Architecture & Navigation
 
-##### HTML Page Documents (Root Directory):
-- home.html | Primary landing page.
-- about.html | Brand story.
-- products.html | Complete categorized menu.
-- enquiry.html | FAQ accordions and custom order/class booking enquiry form.
-- contact.html | Physical store location details, trading hours, and embedded Google Maps iframe.
+**9.4. HTML Page Documents (Root Directory):**
+- index.html | Primary landing page featuring hero banners, continuous marquee strip, and dynamic featured products.
+- about.html | Brand story, infinite showcase slider, mission & vision cards, and interactive milestone tabs.
+- products.html | Complete catalog with category filters, real-time search, and product lightbox modals.
+- enquiries.html | Baking workshop details, interactive FAQ accordions, client-side validated enquiry form, and response confirmation modal.
+- contact.html | Bakery hero banner, Hazelwood store location details, trading hours, validated contact form, confirmation modal, and embedded Google Map.
 
-**8.5. Styling System (CSS):**
-- css/style.css | Central stylesheet containing design variables (`color palette, typography pairings`), responsive layout grids, keyframe animations (`@keyframes horizontalSlide`, `@keyframes marquee-scroll`), and mobile viewport media queries.
+**9.5. Styling System (CSS):**
+- style.css | Central stylesheet containing design variables (color palette, typography pairings), responsive layout grids, keyframe animations `(@keyframes horizontalSlide, @keyframes marquee-scroll, @keyframes marquee-infinite)`, component modal overlay styles, and mobile viewport media queries.
 
-**8.6. Media Assets (images):**
-- Stores all graphical assets with PNG/JPG fallbacks.
+**9.6. Core Application Logic (JavaScript):**
+- script.js | Centralized master JavaScript file handling dynamic product catalog rendering, real-time search/filter algorithms, quick-view lightbox modals, Intersection Observer scroll animations `(animate-on-scroll)`, Regex form validation engines, and asynchronous AJAX submission simulation handlers for both `enquiries.html` and `contact.html`.
 
-**8.7. Documentation & Logs:**
-- README.md 
-- CHANGELOG.md
+**9.7. SEO & Crawling Assets (Root Directory):**
+- robots.txt | Instructions for search engine crawlers regarding page indexing and sitemap discovery.
+- sitemap.xml | XML sitemap mapping canonical URLs, last modified timestamps, change frequencies, and priority values across all 5 site pages.
 
-**8.8. Making Changes and Pushing Updates:**
+**9.8. Media Assets (images/ directory):**
+- Stores all graphical assets formatted with optimized `.webp` media encoding alongside `.png` and `.jpg` fallback images.
+
+**9.9. Documentation & Logs:**
+- README.md | Comprehensive project documentation, architectural overview, technical stack, timeline milestones, and navigation guide.
+- CHANGELOG.md | Version release history tracking incremental feature updates and bug fixes following Semantic Versioning standards.
+
+**9.10. Making Changes and Pushing Updates:**
 
 ##### To update code or content via VS Code Terminal:
 - Edit target files: Save changes in your HTML or CSS files.- Stage changes | git add .
@@ -121,7 +147,7 @@ Detailed line 2.”
 - Push to remote repository | git push origin main
 
 
-## 9. Responsive UI Verification
+## 10. Responsive UI Verification
 
 ### Running tests on Desktop (MacBook)
 
@@ -136,43 +162,46 @@ Detailed line 2.”
 ![Mobile Tests](images/mobile.png)
 
 
-## 10. Timeline and Milestones
+## 11. Timeline and Milestones
 
-### Part 1 submission | 14 August 2026
+| Milestone| Deadline | Task Description | Status |
+| :--- | :--- | :--- | :--- |
+| **Part 1** | **14 August 2026** | **Initial Website Wireframing & Structural Build** | **COMPLETED** |
+| | 03 – 05 August 2026 | Planning & Foundation | COMPLETED |
+| | 06 – 08 August 2026 | Research & Content Gathering | COMPLETED |
+| | 10 – 14 August 2026 | HTML Structure Development | COMPLETED |
+| **Part 2** | **18 September 2026** | **Full Visual Rebrand & CSS Responsive Styling** | **COMPLETED** |
+| | 03 – 04 September 2026 | Rebranding and Visual UI Design | COMPLETED |
+| | 07 September 2026 | Updating HTML structures for all pages | COMPLETED |
+| | 09 – 12 September 2026 | CSS styling for pages, fixes to HTML structures | COMPLETED |
+| | 16 – 18 September 2026 | Responsiveness of Website pages + testing | COMPLETED |
+| **Final Part** | **02 November 2026** | **v3.0.0 Dynamic Interactivity, JS Validation & SEO Implementation** | **COMPLETED** |
+| | 20 – 25 October 2026 | Dynamic DOM Manipulation, Product Catalog & Search/Filter | COMPLETED |
+| | 26 – 28 October 2026 | Interactive Lightbox Modals & Site-wide Scroll Animations | COMPLETED |
+| | 29 – 31 October 2026 | Client-Side JS Validation, Custom Confirmation Modals & Layout Fine-Tuning | COMPLETED |
+| | 01 – 02 November 2026 | Search Engine Optimization (SEO), Metadata, robots.txt, sitemap.xml & Final Part Submission | COMPLETED |
 
-03 - 05 August 2026 | Planning & Foundation *(COMPLETED)*
 
-06 - 08 August 2026 | Research & Content Gathering *(COMPLETED)*
-
-10 - 14 August 2026 | HTML Structure *(COMPLETED)*
-
-### Part 2 submission | 18 September 2026
-
-03 - 04 September 2026 | Rebranding and Visual UI Design *(COMPLETED)*
-
-07 September 2026 | Updating HTML sturctures for all pages *(COMPLETED)*
-
-09 - 12 September 2026 | CSS styling for pages, fixes to HTML structures *(COMPLETED)*
-
-16 - 18 September 2026 | Responsiveness of Website pages + testing *(COMPLETED)*
-
-
-## 11. Summary Report of Changelog Changes
+## 12. Summary Report of Changelog Changes
 
 ### Version Release History 
 
-| Version | Date | Core Changes | 
-| :--- | :--- | :--- | 
-| **v1.0.0** | 2026-08-14 | Initial website repository launch, basic HTML structures, and baseline content files. | 
+| Version | Date | Core Changes |
+| :--- | :--- | :--- |
+| **v1.0.0** | 2026-08-14 | Initial website repository launch, basic HTML structures, and baseline content files. |
 | **v2.0.0** | 2026-09-18 | Full visual rebrand to Kneadforit., introduction of `style.css`, WebP asset integration, semantic improvements, and multi-device responsive design. |
+| **v3.0.0** | 2026-11-02 | Dynamic JavaScript integration, search/filtering catalog, client-side Regex form validation, simulated AJAX submission & confirmation modals, complete responsive Contact layout, and full SEO setup (meta tags, `robots.txt`, `sitemap.xml`). |
 
-- **Rebranding |** Renamed from Knead You to Kneadforit. (Kfi.) to establish a distinct, trademark-compliant brand identity.
-- **Visual Redesign & CSS Integration |** Replaced static image banners with a centralized stylesheet (css/style.css), implementing responsive flex layouts, web fonts, custom color palettes, and styled components.
-- **Enhanced Functionality |** Introduced animated marquee tickers, interactive CSS accordion FAQs, responsive multi-column footers, and embedded Google Maps.
-- **Bug Fixes |** Fixed broken anchor links across footers to properly direct custom enquiries to enquiries.html#enquiry-form-section.
+* **Rebranding |** Renamed from Knead You to Kneadforit. (Kfi.) to establish a distinct, trademark-compliant brand identity.
+* **Visual Redesign & CSS Integration |** Replaced static image banners with a centralized stylesheet (`css/style.css`), implementing responsive flex/grid layouts, web fonts, custom color palettes, and styled components.
+* **Enhanced Functionality |** Introduced animated marquee tickers, interactive CSS accordion FAQs, responsive multi-column footers, and embedded Google Maps.
+* **Dynamic Interactivity & Modals |** Developed dynamic catalog rendering via centralized `script.js`, interactive quick-view product lightbox modals, and smooth `IntersectionObserver` scroll animations across all pages.
+* **Form Validation & AJAX Simulation |** Added robust client-side JavaScript validation (Regex email/phone patterns, length checks) for both `enquiries.html` and `contact.html`, complete with inline error messaging and custom confirmation modals.
+* **SEO & Crawler Optimization |** Implemented targeted page meta tags (Title, Description, Keywords, Open Graph), site-wide H1–H3 heading hierarchy alignment, image alt text optimization, and created root `robots.txt` and `sitemap.xml` files.
+* **Bug Fixes |** Fixed broken anchor links across footers to properly direct custom enquiries to `enquiries.html#enquiry-form-section`, aligned section slide-up animations site-wide, and corrected contact hero background positioning and overlay styling.
 
 
-## 12. Changelog
+## 13. Changelog
 
 All notable changes to the KY Bakery website are documented here.
 
@@ -302,17 +331,107 @@ All notable changes to the KY Bakery website are documented here.
 - `Added layout and responsive styles for contact page`
 
 
-## 13. Author
+### [3.0.0] - 2026-11-02
+
+### Added
+- Added `script.js`.
+- Added page-specific `<title>` tags, `<meta name="description">`, and `<meta name="keywords">` for all 5 HTML pages.
+- Added root robots.txt configuration file directing crawlers and referencing the sitemap.
+- Added root sitemap.xml file listing canonical URLs, update frequencies, and page priorities.
+##### Home:
+- Added dynamic product rendering for "Neighborhood Essentials" using semantic `<picture>` elements.
+- Added an interactive product lightbox modal supporting quick view inspection, backdrop clicks, and Escape key dismissal.
+- Added scroll-triggered entrance animations via `IntersectionObserver`.
+##### About:
+- Added an interactive milestone tabs section allowing users to explore the bakery's history (2022–2026).
+##### Products:
+- Added a live search input toolbar allowing users to instantly search products by keyword or description.
+- Added interactive category filter buttons (All Treats, Bento Cakes, Cupcakes, Cookies, Breads) powered by JavaScript filtering.
+- Added a custom 500px × 600px vertical lightbox modal displaying the product image and name.
+##### Enquiries:
+- Added comprehensive client-side JavaScript validation for all enquiry form fields (Name, Phone number format, Email format, selection requirements, and minimum message length).
+- Added inline validation error notice containers and dynamic error styling.
+- Added an AJAX form submission simulation that compiles user details and generates dynamic cost/availability responses based on the selected enquiry type.
+- Added an interactive confirmation modal displaying personalized success messages, compiled recipient email details, and pricing/availability feedback.
+##### Contact:
+- Added comprehensive client-side JavaScript form validation with Regex patterns for phone number and email inputs, alongside character length validation for messages.
+- Added inline error message containers and dynamic input border feedback for invalid entries.
+- Added an AJAX form submission flow that compiles user data and triggers an interactive confirmation modal routing messages to kneadforitenquires@gmail.com.
+##### CSS:
+- Added design variables (`--color-peach`, `--color-espresso`, `--color-cotton-candy`, `--color-lemon-chiffon`) to establish site-wide theme consistency.
+- Added custom keyframe animation rules (`@keyframes horizontalSlide`, `@keyframes marquee-scroll`, and `@keyframes marquee-infinite`) for smooth UI transitions and scrolling banners.
+- Added reusable `.animate-on-scroll` opacity and translate transitions managed via Intersection Observer.
+- Added custom modal overlay styling (`.modal-overlay`, `.modal-content`) for product quick-view lightboxes and form submission confirmations across all pages.
+- Added custom opacity control (`opacity: 0.75`) to `.contact-hero img` for optimal text readability over background imagery.
+- Added centered text alignment (`text-align: center; width: 100%;`) to the "Get In Touch!" heading in `.contact-info-map-column`.
+
+### Updated
+- Verified single `<h1>` tag execution per page and validated `<h2>/<h3>` heading hierarchies.
+- Validated image alt text and WebP `<picture>` container implementations across all main sections.
+##### Home:
+- Updated the html link for the homepage to `index.html`.
+- Updated stylesheet linking and repositioned `script.js` to the top of the `<body>` element to ensure proper DOM loading.
+##### About:
+- Updated stylesheet reference to `style.css`.
+- Migrated inline milestone tab styles into `style.css` for clean separation of concerns.
+##### Products:
+- Updated the static product grid to render dynamically from a structured `allProductsCatalog` array in `script.js`.
+- Updated event handling to safely attach click listeners programmatically, resolving string escaping issues.
+##### Enquiries:
+- Updated the enquiry form HTML element with the novalidate attribute to support custom JavaScript validation handlers.
+- Updated layout sections to include the animate-on-scroll class, ensuring the enquiries page features the same smooth slide-up entrance animation as the rest of the website.
+##### Contact:
+- Redesigned `contact.html` and layout CSS into a responsive two-column grid featuring the contact form on the left and structured contact details with an embedded Google Map on the right.
+- Updated the contact hero section with the bakery background image `(bakery.png)`, negative top margin alignment, absolute positioning over text content, and custom opacity styling.
+- Centered the "Get In Touch!" section heading and formatted the physical address, phone, email, and trading hours into a clean 3-column info grid row.
+- Added `animate-on-scroll` entrance animation classes to match site-wide slide-up standards.
+##### CSS:
+- Updated global typography styling to integrate Google Fonts (`Boldonse`, `Merriweather`, and `Poppins`) across all headings, body copy, and button labels.
+- Updated header layout and navigation links with interactive hover states and active page indicator highlights.
+- Updated scalloped SVG divider SVG styling (`.scallop-banner`) for seamless header-to-hero visual transitions across all pages.
+- Updated product cards (`.product-card`, `.interactive-card`) into flex/grid structures with card elevation transitions on hover.
+- Updated `.contact-hero` into a fixed-height relative container (`height: 32rem`) featuring absolute-positioned background media and z-index layered text overlay.
+- Updated `.contact-layout-grid` into a responsive 2-column grid (`1fr 1.25fr`) with a 4rem gap separating the form from store details and map views.
+- Updated `.contact-info-grid-row` into a responsive 3-column layout row for physical address, phone, email, trading hours, and parking information.
+- Updated multi-column site footer (`.site-footer`) across all pages with responsive grid columns and storefront illustration styling.
+
+### Fixed
+##### Home:
+- Fixed broken product and header logo image display issues caused by relative path configurations.
+- Fixed layout collapse by correcting stylesheet path references.
+##### Products:
+- Fixed broken image displays caused by incorrect relative folder references.
+- Fixed Quick View modal triggers not opening by replacing inline `onclick` string attributes with robust event listeners.
+##### Enquiries:
+- Fixed missing interactive feedback by replacing default form behavior with structured error handling and success modals.
+##### CSS:
+- Fixed top margin alignment on `.contact-hero` (`margin-top: -7.5rem`) to eliminate layout gaps and pull background images under the scalloped header banner.
+- Fixed hero section text vertical positioning using padding adjustments to accommodate navigation bar overlays without content clipping.
+- Fixed responsive media queries (`@media screen and (max-width: 65em)` and `max-width: 38em`) to ensure forms, product grids, and info rows stack gracefully on mobile and tablet viewports.
+- Fixed form element focus and validation error state borders (`var(--color-crushed-berry)`) across `enquiries.html` and `contact.html`.
+
+##### Commits
+- `Updated the home.html to index.html and added the javascript file.`
+- `Added interactive milestone tabs.`
+- `Implemented dynamic catalog, live search, filters, and 500 by 600px lightbox modal.`
+- `Added form validation, AJAX submission simulation, and confirmation modal.`
+- `Redesigned contact page layout, add form validation, and confirmation modal.`
+- `Updated core stylesheet and component styles.`
+- `Added robots.txt for search engine crawler instructions.`
+- `Added sitemap.xml for search engine page indexing.`
+
+
+## 14. Author
 
 **Lethabo Mohlala**
 
-## 14. Copyright
+## 15. Copyright
 
 © 2026 Lethabo Mohlala. All rights reserved.
 
 This project and its source code are intended for educational and project purposes. Unauthorized copying, redistribution, or commercial use of this project is not permitted without permission from Lethabo Mohlala.
 
-## 15. Youtube Video References
+## 16. Youtube Video References
 
 ALB Dev. 2021. *Hide Scrollbar From Websites in Different Browsers | HTML and CSS.* [video online]. Available at: https://www.youtube.com/watch?v=BVIgE9lZF0w [Accessed 12 September 2026].
 
@@ -338,7 +457,7 @@ Slaying The Dragon. 2023. *Learn CSS Variables In 7 Minutes.* [video online]. Av
 
 Web Bae. 2022. *You Can't Find a Better Infinite Marquee.* [video online]. Available at: https://www.youtube.com/watch?v=ZMCNin2VjxU [Accessed 12 September 2026].
 
-## 16. Image References
+## 17. Image References
 
 ### Home page
 
