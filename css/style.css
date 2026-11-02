@@ -2084,6 +2084,34 @@ display: flex;
   }
 }
 
+/* RESPONSIVE MODAL FOR MOBILE */
+@media screen and (max-width: 48em) {
+  .modal-body {
+    flex-direction: column;
+    padding: 1.5rem;
+    max-height: 85vh;
+    overflow-y: auto;
+    gap: 1rem;
+  }
+  .modal-image-col {
+    width: 100%;
+    min-height: 12.5rem; /* Ensures a spacious container for the product image */
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .modal-image-col img {
+    width: 100%;
+    height: 100%;
+    max-height: 14rem;   /* Allows the cake image to scale up nicely */
+    object-fit: contain;
+  }
+  .modal-info-col {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 /* MOBILE PHONES (Under 550px) */
 @media screen and (max-width: 34.375em) {
   body .footer-container {
