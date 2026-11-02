@@ -1109,7 +1109,7 @@ main, .main-container {
   width: 50%;
   flex: 0 0 50%;
   background-color: var(--color-alice-blue);
-  background-image: url('images/pattern.png');
+  background-image: url('../images/pattern.png');
   background-repeat: repeat;          /* Makes the pattern I created seamless */
   background-size: 31.25rem auto;        /* Zooms the content of the bg image */
   background-position: top center;
@@ -1200,7 +1200,7 @@ main, .main-container {
   width: 50%;
   flex: 0 0 50%;
   background-color: var(--color-blush-pink);
-  background-image: url('images/pattern2.png');
+  background-image: url('../images/pattern2.png');
   background-repeat: repeat;          /* Makes the pattern I created seamless */
   background-size: 31.25rem auto;        /* Zooms the content of the bg image */
   background-position: top center;
