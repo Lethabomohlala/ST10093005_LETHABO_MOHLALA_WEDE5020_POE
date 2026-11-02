@@ -186,3 +186,163 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+/* PRODUCTS PAGE */
+// CATALOG, SEARCH & FILTER
+const allProductsCatalog = [
+    // Bento Cakes
+    { id: "vanilla-berry-cloud", category: "Bento Cake", name: "Vanilla Berry Cloud", description: "Fluffy vanilla sponge layered with house-made strawberry jam and light whipped cream.", price: "Small: R 180 | Medium: R 450", imagePng: "images/stawberry2.png", imageWebp: "images/stawberry2.webp" },
+    { id: "midnight-cocoa-truffle", category: "Bento Cake", name: "Midnight Cocoa Truffle", description: "Three layers of moist dark cocoa sponge frosted with silky chocolate buttercream.", price: "Medium (18cm) | R 600", imagePng: "images/darkchoco.png", imageWebp: "images/darkchoco.webp" },
+    { id: "mocha-swirl-espresso", category: "Bento Cake", name: "Mocha Swirl Espresso", description: "Marble swirl of chocolate and vanilla espresso sponge with chocolate ganache.", price: "Small: R 200 | Medium: R 520", imagePng: "images/marble.png", imageWebp: "images/marble.webp" },
+    { id: "carnival-sunset", category: "Bento Cake", name: "Carnival Sunset", description: "Vibrant pink and golden sponge layers with whipped cream and rainbow sprinkles.", price: "Small: R 190 | Medium: R 480", imagePng: "images/carnival.png", imageWebp: "images/carnival.webp" },
+    
+    // Cupcakes
+    { id: "ferrero-rocher", category: "Cupcake", name: "Ferrero Rocher", description: "Decadent chocolate cupcake with velvety Rocher frosting and whole Ferrero.", price: "6 Pack: R 220 - R 250", imagePng: "images/ferrero.png", imageWebp: "images/ferrero.webp" },
+    { id: "ruby-cream-swirl", category: "Cupcake", name: "Ruby Cream Swirl", description: "Deep-red cocoa sponge with silky vanilla cream cheese frosting.", price: "6 Pack: R 200 - R 250", imagePng: "images/velvet.png", imageWebp: "images/velvet.webp" },
+    { id: "salted-caramel-cocoa", category: "Cupcake", name: "Salted Caramel Cocoa", description: "Soft vanilla cake, chocolate shell, whipped caramel frosting and drizzle.", price: "6 Pack: R 200 - R 250", imagePng: "images/caramel.png", imageWebp: "images/caramel.webp" },
+    { id: "party-sprinkle", category: "Cupcake", name: "Party Sprinkle Sparkle", description: "Light vanilla confetti sponge with sweet pastel-pink buttercream.", price: "6 Pack: R 200 - R 250", imagePng: "images/confetti.png", imageWebp: "images/confetti.webp" },
+
+    // Cookies
+    { id: "pink-velvet-thumbprint", category: "Cookie", name: "Pink Velvet Thumbprint", description: "Soft buttery vanilla cookie with strawberry-infused pink buttercream center.", price: "6 Pack: R 180 - R 220", imagePng: "images/thumbprint.png", imageWebp: "images/thumbprint.webp" },
+    { id: "biscoff-pb-crunch", category: "Cookie", name: "Biscoff PB Crunch", description: "Lotus Biscoff cookie dough drizzled with peanut butter and roasted peanuts.", price: "6 Pack: R 180 - R 220", imagePng: "images/biscoff.png", imageWebp: "images/biscoff.webp" },
+    { id: "triple-chocolate", category: "Cookie", name: "Triple Chocolate Drop", description: "Golden brown sugar dough packed with decadent milk and dark chocolate chips.", price: "6 Pack: R 180 - R 220", imagePng: "images/chocochip.png", imageWebp: "images/chocochip.webp" },
+    { id: "funfetti-sandwich", category: "Cookie", name: "Funfetti Sandwich", description: "Rich double-chocolate cookies layered with fluffy vanilla buttercream.", price: "6 Pack: R 200 - R 220", imagePng: "images/sandwich2.png", imageWebp: "images/sandwich2.webp" },
+
+    // Breads
+    { id: "golden-rustic-baguette", category: "Bread", name: "Golden Rustic Baguette", description: "Traditional French-style loaf with a golden crackly crust and soft interior.", price: "4 Loaves: R 160 | 6 Loaves: R 280", imagePng: "images/baguette.png", imageWebp: "images/baguette.webp" },
+    { id: "hearth-baked-ciabatta", category: "Bread", name: "Hearth-Baked Ciabatta", description: "Classic Italian slipper bread with a crisp crust and light airy crumb.", price: "4 Loaves: R 210 | 6 Loaves: R 280", imagePng: "images/ciabatta.png", imageWebp: "images/ciabatta.webp" },
+    { id: "heritage-seeded-sourdough", category: "Bread", name: "Heritage Seeded Sourdough", description: "Slow-fermented small batch loaf with golden crust and sesame seeds.", price: "4 Loaves: R 240 | 6 Loaves: R 280", imagePng: "images/sourdough.png", imageWebp: "images/sourdough.webp" },
+    { id: "butter-rich-brioche", category: "Bread", name: "Butter-Rich Knot Brioche", description: "Rich egg-and-butter bread baked with a distinctive knotted shape.", price: "4 Loaves: R 220 | 6 Loaves: R 280", imagePng: "images/brioche.png", imageWebp: "images/brioche.webp" }
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderProductCatalog(allProductsCatalog);
+    initSearchAndFilter();
+    initProductsModalEvents();
+});
+
+function renderProductCatalog(products) {
+    const grid = document.getElementById("products-catalog-grid");
+    if (!grid) return;
+
+    grid.innerHTML = "";
+
+    if (products.length === 0) {
+        grid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; font-family: var(--font-body); font-weight: 300; padding: 2rem;">Looks like the tray is empty (๑ᵔ⤙ᵔ๑) Let's whisk up something else ⭑.ᐟ</p>`;
+        return;
+    }
+
+    products.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "product-card interactive-card";
+        card.innerHTML = `
+            <div class="product-image-wrapper" title="Click to inspect ${product.name}">
+                <img src="${product.imagePng}" alt="${product.name}">
+            </div>
+            <div class="product-info">
+                <span class="product-category">${product.category}</span>
+                <h3 class="product-title">${product.name}</h3>
+                <p class="product-description">${product.description}</p>
+                <p class="product-price">${product.price}</p>
+                <div class="card-btn-group">
+                    <button class="view-btn preview-btn" onclick='openProductsModal(${JSON.stringify(product)})'>Quick View >⩊<</button>
+                    <a href="enquiries.html#enquiry-form-section" class="enquire-btn">Enquire Now</a>
+                </div>
+            </div>
+        `;
+
+        // product image click opens modal
+        const imgWrapper = card.querySelector(".product-image-wrapper");
+        if (imgWrapper) {
+            imgWrapper.addEventListener("click", () => openProductsModal(product));
+        }
+
+        grid.appendChild(card);
+    });
+}
+
+function initSearchAndFilter() {
+    const searchInput = document.getElementById("product-search-input");
+    const filterButtons = document.querySelectorAll(".cat-btn");
+
+    let currentCategory = "all";
+    let currentSearchQuery = "";
+
+    function filterAndSearch() {
+        let filtered = allProductsCatalog;
+
+        if (currentCategory !== "all") {
+            filtered = filtered.filter(p => p.category === currentCategory);
+        }
+
+        if (currentSearchQuery.trim() !== "") {
+            const q = currentSearchQuery.toLowerCase();
+            filtered = filtered.filter(p => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q));
+        }
+
+        renderProductCatalog(filtered);
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            currentSearchQuery = e.target.value;
+            filterAndSearch();
+        });
+    }
+
+    if (filterButtons.length > 0) {
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                currentCategory = btn.getAttribute("data-filter");
+                filterAndSearch();
+            });
+        });
+    }
+}
+
+// PRODUCTS PAGE ISOLATED MODAL LOGIC
+function openProductsModal(product) {
+    const modal = document.getElementById("products-page-modal");
+    if (!modal) return;
+
+    document.getElementById("products-modal-img").src = product.imagePng;
+    document.getElementById("products-modal-img").alt = product.name;
+    document.getElementById("products-modal-title").textContent = product.name;
+
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+}
+
+function closeProductsModal() {
+    const modal = document.getElementById("products-page-modal");
+    if (!modal) return;
+
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+function initProductsModalEvents() {
+    const closeBtn = document.getElementById("products-modal-close-btn");
+    const modal = document.getElementById("products-page-modal");
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeProductsModal);
+    }
+
+    if (modal) {
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeProductsModal();
+            }
+        });
+    }
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeProductsModal();
+    });
+}
