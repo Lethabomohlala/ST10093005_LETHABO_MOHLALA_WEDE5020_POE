@@ -236,3 +236,5 @@ All notable changes to the KY Bakery website are documented here.
 - `Added robots.txt for search engine crawler instructions.`
 - `Added sitemap.xml for search engine page indexing.`
 - `Fixed horizontal padding to products category wrapper on mobile viewports.`
+- `Updated interactive carousel lightbox with thumbnail strip.`
+- `Implemented gallery lightbox CSS and script controllers.`
