@@ -221,6 +221,7 @@ All notable changes to the KY Bakery website are documented here.
 - Fixed hero section text vertical positioning using padding adjustments to accommodate navigation bar overlays without content clipping.
 - Fixed responsive media queries (`@media screen and (max-width: 65em)` and `max-width: 38em`) to ensure forms, product grids, and info rows stack gracefully on mobile and tablet viewports.
 - Fixed form element focus and validation error state borders (`var(--color-crushed-berry)`) across `enquiries.html` and `contact.html`.
+- Fixed side padding for mobile viewports' product catalogue titles and search fields.
 
 ### Commits
 - `Updated the home.html to index.html and added the javascript file.`
@@ -231,3 +232,4 @@ All notable changes to the KY Bakery website are documented here.
 - `Updated core stylesheet and component styles.`
 - `Added robots.txt for search engine crawler instructions.`
 - `Added sitemap.xml for search engine page indexing.`
+- `Fixed horizontal padding to products category wrapper on mobile viewports.`
