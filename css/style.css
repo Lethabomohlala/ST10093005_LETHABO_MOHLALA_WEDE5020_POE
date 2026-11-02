@@ -419,7 +419,7 @@ hero-title .title-line {
   max-width: 62.5rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 5rem;
   margin-bottom: 2rem;
 }
@@ -507,7 +507,7 @@ hero-title .title-line {
 .slide-item {
   width: 37.5rem;
   height: 100%;
-  flex-shrink: 0 0 37.5rem;
+  flex-shrink: 0;
   background-size: cover;
   background-position: center;
 }
@@ -632,7 +632,7 @@ div.story-card > p {
   max-width: 32.5rem;
   min-height: auto;
   aspect-ratio: 520 / 380;            /* Preserves natural image dimensions */
-  background-image: url('../images/wavycard.png');
+  background-image: url('images/wavycard.png');
   background-size: contain;           /* Keeps full frame visible without stretching */
   background-repeat: no-repeat;
   background-position: center;
@@ -1070,7 +1070,7 @@ main, .main-container {
   width: 50%;
   flex: 0 0 50%;
   background-color: var(--color-alice-blue);
-  background-image: url('/images/pattern.png');
+  background-image: url('images/pattern.png');
   background-repeat: repeat;          /* Makes the pattern I created seamless */
   background-size: 31.25rem auto;        /* Zooms the content of the bg image */
   background-position: top center;
@@ -1161,7 +1161,7 @@ main, .main-container {
   width: 50%;
   flex: 0 0 50%;
   background-color: var(--color-blush-pink);
-  background-image: url('/images/pattern2.png');
+  background-image: url('images/pattern2.png');
   background-repeat: repeat;          /* Makes the pattern I created seamless */
   background-size: 31.25rem auto;        /* Zooms the content of the bg image */
   background-position: top center;
@@ -1536,6 +1536,300 @@ main, .main-container {
   overflow: hidden;
 }
 
+/* ANIMATIONS & TRANSITIONS */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* INTERACTIVE CARD ENHANCEMENTS */
+
+.product-image-wrapper {
+  cursor: pointer;
+  position: relative;
+}
+.card-btn-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.preview-btn {
+  background-color: var(--color-lemon-chiffon) !important;
+  border-color: var(--color-espresso) !important;
+  color: var(--color-espresso) !important;
+  cursor: pointer;
+}
+.preview-btn:hover {
+  background-color: var(--color-crushed-berry) !important;
+  color: var(--color-white) !important;
+}
+
+/* LIGHTBOX MODAL STYLES (HOMEPAGE) */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(81, 48, 41, 0.75); /* Dark espresso overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-content {
+  background-color: var(--color-alice-blue);
+  border: 2px solid var(--color-espresso);
+  border-radius: 1.5rem;
+  max-width: 45rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.85);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.25);
+}
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-espresso);
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.modal-close:hover {
+  transform: scale(1.2);
+  color: var(--color-crushed-berry);
+}
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2.5rem;
+  gap: 2rem;
+}
+.modal-image-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-alice-blue);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.modal-image-col img {
+  max-width: 100%;
+  max-height: 16rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.5rem #ffffff);
+}
+.modal-info-col {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.modal-info-col .product-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.modal-info-col .product-description {
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+.modal-info-col .product-price {
+  font-weight: 600;
+  color: var(--color-crushed-berry);
+  margin-bottom: 1.5rem;
+}
+
+/* LIGHTBOX MODAL STYLES (PRODUCT PAGE) */
+
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(81, 48, 41, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 45rem;
+}
+/* Close Button */
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--color-white);
+  cursor: pointer;
+  z-index: 2010;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.lightbox-close:hover {
+  transform: scale(1.2);
+  color: var(--color-cotton-candy);
+}
+/* Main View Layout */
+.lightbox-main-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  position: relative;
+}
+/* Portrait Display Card */
+.lightbox-display-card {
+  width: 22rem;
+  height: 30rem;
+  background-image: url('images/lb_background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid var(--color-white);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+  position: relative;
+}
+.lightbox-image-wrapper {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.lightbox-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.15));
+}
+.lightbox-title {
+  font-family: var(--font-logo);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-espresso);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+/* Navigation Buttons Flanking the Card */
+.lightbox-prev,
+.lightbox-next {
+  background: var(--color-white);
+  border: 1px solid var(--color-espresso);
+  color: var(--color-espresso);
+  font-size: 1.25rem;
+  width: 3.20rem;
+  height: 3.20rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.2);
+}
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--color-lemon-chiffon);
+  transform: scale(1.1);
+}
+/* Bottom Thumbnail Carousel Strip */
+.lightbox-thumbs-strip {
+display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  max-width: 36rem;
+  box-sizing: border-box;
+  margin-top: 1.5rem;
+  scrollbar-width: none;
+  justify-content: flex-start; /* Ensures items start from the left */
+}
+
+.lightbox-thumbs-strip::-webkit-scrollbar {
+  display: none;
+}
+.lightbox-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  background-color: var(--color-white);
+  background-image: url('images/lb_background.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  padding: 6px;
+}
+.lightbox-thumb:hover,
+.lightbox-thumb.active-thumb {
+  opacity: 1;
+  border-color: var(--color-lemon-chiffon);
+  transform: scale(1.08);
+}
 
 /* RESPONSIVE DESIGN */
 /* Youtube Ref: "Master Responsive CSS Media Queries in easy way" */
@@ -1631,7 +1925,7 @@ main, .main-container {
     max-width: 32.5rem;
     height: auto;
     aspect-ratio: 520 / 380;
-    background-image: url('../images/wavycard.png');
+    background-image: url('images/wavycard.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1734,228 +2028,21 @@ main, .main-container {
   }
 }
 
-/* ANIMATIONS & TRANSITIONS */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.animate-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* INTERACTIVE CARD ENHANCEMENTS */
-.product-image-wrapper {
-  cursor: pointer;
-  position: relative;
-}
-.card-btn-group {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: auto;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.preview-btn {
-  background-color: var(--color-lemon-chiffon) !important;
-  border-color: var(--color-espresso) !important;
-  color: var(--color-espresso) !important;
-  cursor: pointer;
-}
-.preview-btn:hover {
-  background-color: var(--color-crushed-berry) !important;
-  color: var(--color-white) !important;
-}
-
-/* LIGHTBOX MODAL STYLES */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(81, 48, 41, 0.75); /* Dark espresso overlay */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  padding: 1.5rem;
-  box-sizing: border-box;
-}
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-.modal-content {
-  background-color: var(--color-alice-blue);
-  border: 2px solid var(--color-espresso);
-  border-radius: 1.5rem;
-  max-width: 45rem;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  transform: scale(0.85);
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.25);
-}
-.modal-overlay.active .modal-content {
-  transform: scale(1);
-}
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1.25rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--color-espresso);
-  cursor: pointer;
-  z-index: 10;
-  line-height: 1;
-  transition: transform 0.2s ease;
-}
-.modal-close:hover {
-  transform: scale(1.2);
-  color: var(--color-crushed-berry);
-}
-.modal-body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 2.5rem;
-  gap: 2rem;
-}
-.modal-image-col {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-alice-blue);
-  border-radius: 1rem;
-  padding: 1.5rem;
-}
-.modal-image-col img {
-  max-width: 100%;
-  max-height: 16rem;
-  object-fit: contain;
-  filter: drop-shadow(0 0 0.5rem #ffffff);
-}
-.modal-info-col {
-  flex: 1.2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-.modal-info-col .product-title {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-}
-.modal-info-col .product-description {
-  margin-bottom: 1rem;
-  max-width: 100%;
-}
-.modal-info-col .product-price {
-  font-weight: 600;
-  color: var(--color-crushed-berry);
-  margin-bottom: 1.5rem;
-}
-
-/* PRODUCTS PAGE ISOLATED MODAL STYLES */
-.products-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(81, 48, 41, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-.products-modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-.products-modal-content {
-  background-color: var(--color-alice-blue);
-  border: 1px solid var(--color-espresso);
-  border-radius: 1.5rem;
-  width: 500px;
-  height: 600px;
-  max-width: 95vw;
-  max-height: 95vh;
-  position: relative;
-  overflow: hidden;
-  transform: scale(0.85);
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-}
-.products-modal-overlay.active .products-modal-content {
-  transform: scale(1);
-}
-.products-modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1.25rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--color-espresso);
-  cursor: pointer;
-  z-index: 10;
-  line-height: 1;
-  transition: transform 0.2s ease;
-}
-.products-modal-close:hover {
-  transform: scale(1.2);
-  color: var(--color-crushed-berry);
-}
-.products-modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 2.5rem;
-  text-align: center;
-  box-sizing: border-box;
-}
-.products-modal-image-wrapper {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-alice-blue);
-  border-radius: 1rem;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  box-sizing: border-box;
-}
-.products-modal-image-wrapper img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 0 0.5rem #ffffff);
-}
-.products-modal-name {
-  font-family: var(--font-h1);
-  font-size: 1.5rem;
-  color: var(--color-espresso);
-  line-height: 1.2;
+/* Responsive adjustments */
+@media screen and (max-width: 38em) {
+  .lightbox-display-card {
+    width: 18rem;
+    height: 28rem;
+  }
+  .lightbox-image-wrapper {
+    height: 18rem;
+  }
+  .lightbox-prev,
+  .lightbox-next {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
 }
 
 /* MOBILE PHONES (Under 550px) */
@@ -1979,29 +2066,6 @@ main, .main-container {
     body .product-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-}
-/* RESPONSIVE MODAL */
-@media screen and (max-width: 48em) {
-  .modal-body {
-    flex-direction: column;
-    padding: 1.5rem;
-    max-height: 85vh;
-    overflow-y: auto;
-  }
-  .modal-info-col {
-    align-items: center;
-    text-align: center;
-  }
-}
-/* Responsive adjustment for small mobile screens */
-@media screen and (max-width: 35em) {
-  .products-modal-content {
-    width: 100%;
-    height: 520px;
-  }
-  .products-modal-image-wrapper {
-    height: 260px;
   }
 }
 
