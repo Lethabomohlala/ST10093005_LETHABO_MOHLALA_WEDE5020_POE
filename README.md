@@ -103,14 +103,14 @@ The website's main goals are to highlight Kneadforit's product line, allow local
 
 ### Running the Website Locally
 **9.1. Clone the Repository:**
-- git clone [https://github.com/Lethabomohlala/ST10093005_LETHABO_MOHLALA_WEDE5020_POE.git](hhttps://github.com/Lethabomohlala/ST10093005_LETHABO_MOHLALA_WEDE5020_POE.git)
+- git clone [https://github.com/Lethabomohlala/ST10093005_LETHABO_MOHLALA_WEDE5020_POE.git](https://github.com/Lethabomohlala/ST10093005_LETHABO_MOHLALA_WEDE5020_POE.git)
 
 **9.2. Open the Project Directory:**
 - cd ST10093005_LETHABO_MOHLALA_WEDE5020_POE
 
 **9.3. Launch in Browser:**
-- Double-click index.html directly from your file explorer to launch it in any modern web browser.
-- Alternatively, if using VS Code, install the Live Server extension, right-click index.html, and select Open with Live Server.
+- Double-click `index.html` directly from your file explorer to launch it in any modern web browser.
+- Alternatively, if using VS Code, install the Live Server extension, right-click `index.html`, and select Open with Live Server.
 
 ### Code Base Architecture & Navigation
 
