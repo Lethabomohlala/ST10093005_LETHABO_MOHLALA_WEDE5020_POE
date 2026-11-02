@@ -182,6 +182,8 @@ All notable changes to the KY Bakery website are documented here.
 #### Products:
 - Updated the static product grid to render dynamically from a structured `allProductsCatalog` array in `script.js`.
 - Updated event handling to safely attach click listeners programmatically, resolving string escaping issues.
+- Updated `script.js` with an index-tracking controller to support next/previous item browsing and thumbnail selection across the product catalog.
+- Added event listeners for keyboard arrow keys `(ArrowLeft, ArrowRight)` and the Escape key to allow seamless keyboard navigation and closing of the lightbox gallery.
 
 #### Enquiries:
 - Updated the enquiry form HTML element with the novalidate attribute to support custom JavaScript validation handlers.
@@ -212,6 +214,7 @@ All notable changes to the KY Bakery website are documented here.
 #### Products:
 - Fixed broken image displays caused by incorrect relative folder references.
 - Fixed Quick View modal triggers not opening by replacing inline `onclick` string attributes with robust event listeners.
+- Replaced the standard information modal on `products.html` with an immersive, multi-view carousel lightbox featuring navigational arrows and a dynamic bottom thumbnail strip.
 
 #### Enquiries:
 - Fixed missing interactive feedback by replacing default form behavior with structured error handling and success modals.
