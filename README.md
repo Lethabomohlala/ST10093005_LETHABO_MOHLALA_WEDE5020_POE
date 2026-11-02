@@ -149,15 +149,19 @@ Detailed line 2.”
 
 ## 10. Responsive UI Verification
 
-### Running tests on Desktop (MacBook)
+### Running tests on Desktop (GITHUB PAGES)
 
 ![Desktop and Tests](images/desktop.png)
 
-### Running tests on Tablets (iPad Pro 13 & Surface Pro 10)
+### Running tests on Mobile Devices (GITHUB PAGES)
+
+![Mobile Tests](images/gitmobile.png)
+
+### Running tests on Inspect Tablets (iPad Pro 13 & Surface Pro 10)
 
 ![Desktop and Tests](images/tablet.png)
 
-### Running tests on Mobile Devices (iPhone Pro 16 Max, Pixel 9 & Samsung Galaxy A55)
+### Running tests on Inspect Mobile Devices (iPhone Pro 16 Max, Pixel 9 & Samsung Galaxy A55)
 
 ![Mobile Tests](images/mobile.png)
 
