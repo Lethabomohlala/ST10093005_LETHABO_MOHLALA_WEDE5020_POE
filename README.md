@@ -57,6 +57,8 @@ The website's main goals are to highlight Kneadforit's product line, allow local
 - **Unique Page Metadata |** Tailored `<title>` tags, meta descriptions, and keywords implemented across all 5 site pages alongside Open Graph social sharing tags.
 - **Crawler & Indexing Control |** Root `robots.txt` instructions and a complete `sitemap.xml` file mapping canonical URLs, change frequencies, and priority weights.
 
+![SEO for Kneadforit.](./images/seo.png)
+
 
 ## 5. Sitemap
 
